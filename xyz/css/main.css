@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mb-2,
+.my-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mt-2,
+.my-2 {
+  margin-top: 0.5rem !important;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  position: fixed;
+  width: 85%;
+  right: 0;
+  background: #fff;
+  justify-content: space-between;
+  box-shadow: 1px 4px 6px 0px #f1f1f1;
+}
+header nav .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .navigation img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5em;
+}
+header nav .search input {
+  outline: none;
+  border-radius: 50px;
+  border: 1px solid #dfdfdf;
+  background: #fdfdfd;
+  padding: 0.5em 1em;
+}
+header nav .currentpage p span a {
+  color: #bebebe;
+}
+header nav .menu {
+  display: flex;
+  align-items: center;
+}
+header nav .menu .menuitem {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1em;
+}
+header nav .menu .menuitem a {
+  color: #2b062b;
+}
+header nav .menu .menuitem a:hover {
+  color: steelblue;
+}
+header nav .menu .menuitem img {
+  width: 24px;
+  height: 24px;
+}
+header nav .useraccount {
+  background: #ffeb3b;
+  padding: 6px 45px;
+  border: 1px solid;
+}
+
+main {
+  display: flex;
+}
+main .sidepanel {
+  background: #1d0538;
+  width: 15%;
+  height: 100vh;
+}
+main .sidepanel .about {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+main .sidepanel .about .burger {
+  flex: 0 0 64px;
+  height: 64px;
+  display: grid;
+  place-content: center;
+}
+main .sidepanel .about .title {
+  flex: 1 1 auto;
+}
+main .sidepanel .sidemenu {
+  padding: 1em;
+}
+main .sidepanel .sidemenu .menu {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: -35px !important;
+}
+main .sidepanel .sidemenu .menu img {
+  margin-right: 0.5em;
+  width: 18px;
+}
+main .sidepanel .sidemenu .menu:hover {
+  background: #f5f5f5;
+  border-radius: 50px;
+  color: black !important;
+}
+main .mainpanel {
+  width: 85%;
+  height: 100vh;
+  padding: 0 1em;
+  padding-top: 5rem;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+main .mainpanel .statistics {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+main .mainpanel .statistics .card {
+  padding: 2em 2.5em;
+  background: #1d0538;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+main .mainpanel .statistics .card .stats {
+  margin-right: 1em;
+  color: white;
+}
+main .mainpanel .statistics .card .stats .number {
+  font-size: 25px;
+}
+main .mainpanel .statistics .card .stats .label {
+  color: #e3dcff;
+  font-weight: bold;
+}
+main .mainpanel .statistics .card .illustration img {
+  width: 43px;
+  height: 43px;
+}
+main .mainpanel .elements {
+  display: flex;
+}
+main .mainpanel .elements .activities {
+  width: 75%;
+  background: white;
+  margin-right: 1em;
+  padding: 1em;
+  height: 450px;
+  overflow-y: scroll;
+}
+main .mainpanel .elements .activities .childrencontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card {
+  background: #f5f5f5;
+  padding: 1em;
+  display: grid;
+  place-content: center;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card .artistlable {
+  color: gray;
+  margin: 0.5em 0;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card .childimage {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card h4 {
+  width: 200px;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card p {
+  width: 200px;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card .linkss {
+  padding-top: 10px;
+  margin-bottom: 0 !important;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card .linkss a {
+  background: #673ab7 !important;
+  border: 1px solid #673ab7 !important;
+  box-shadow: none !important;
+  color: white;
+}
+main .mainpanel .elements .activities .childrencontainer .product-card .sponsorbutton {
+  background: white !important;
+  color: black !important;
+  box-shadow: none !important;
+  border: 1px solid #e5e5e5 !important;
+}
+main .mainpanel .elements .mwonyaachart {
+  width: 25%;
+  background: white;
+  padding: 1em;
+}
+main .sponsorshipform {
+  background: #fff;
+  padding: 1em;
+  /* width: 300px; */
+}
+main .linkss a {
+  background: #4caf50 !important;
+  border: 1px solid #4caf50 !important;
+  box-shadow: none !important;
+}
+main .btn.btn-primary {
+  width: 100% !important;
+}
+main .sponserdiv {
+  position: fixed;
+  background: #00000099;
+  display: grid;
+  place-content: center;
+  width: 85%;
+  height: 100%;
+  top: 0;
+  display: none;
+  margin: 0 -1em !important;
+}
+main .sponsorchildnowbtn {
+  background: #118b5f;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  color: white;
+}
+main .sponsorchildnowbtn:hover {
+  background: #027c3a;
+}
+main .sponsorbutton {
+  background: white !important;
+  color: black !important;
+  box-shadow: none !important;
+  border: 1px solid #e5e5e5 !important;
+}
+main .form-group {
+  margin-bottom: 1rem;
+}
+main .active {
+  background: #f5f5f5;
+  border-radius: 50px;
+  color: black !important;
+}
+main .buttonload {
+  background-color: #04AA6D;
+  /* Green background */
+  border: none;
+  /* Remove borders */
+  color: white;
+  /* White text */
+  padding: 12px 16px;
+  /* Some padding */
+  font-size: 16px;
+}
+main .buttonload .fa {
+  margin-left: -12px;
+  margin-right: 8px;
+  display: none;
+}/*# sourceMappingURL=main.css.map */
