@@ -54,7 +54,12 @@ include("config/global.php");
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse bg-dark">
+
+    
+
+    <div class="intropge">
+
+    <nav class="mcontainer navbar navbar-inverse bg-dark">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -65,49 +70,8 @@ include("config/global.php");
                 <a class="navbar-brand" href="#">Mwonyaa Artist</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class='active'><a href="index">Home</a></li>
-
-
-                    <?php
-                    if ($contenttag == "music") {
-                        echo " 
-                        <li><a class='nav-link' href='createcollection'>New Media Collection</a></li> 
-                        <li><a class='nav-link' href='uploadmedia'>Add Songs</a></li>
-                        <li><a class='nav-link' href='managecontent'>Manage Content</a></li>
-                     
-                        ";
-                    } else if ($contenttag == "podcast") {
-                        echo "
-                       <li><a class='nav-link' href='createcollection'>Create Podcast Collection</a></li> 
-                        <li><a class='nav-link' href='uploadmedia'>Add Podcast</a></li>
-                        <li><a class='nav-link' href='managecontent'>Manage Content</a></li>
-                        
-                        ";
-                    } else if ($contenttag == "dj") {
-                        echo "
-                        <li><a class='nav-link' href='createcollection'>Create Mixtape Collection</a></li> 
-                        <li><a class='nav-link' href='uploadmedia'>Add Mixtape</a></li>
-                        <li><a class='nav-link' href='managecontent'>Manage Content</a></li>
-                        
-                        ";
-                    } else if ($contenttag == "poem") {
-
-                        echo " 
-                       <li><a class='nav-link' href='createcollection'>Create Poem Collection</a></li> 
-                        <li><a class='nav-link' href='uploadmedia'>Add Poem</a></li>
-                        <li><a class='nav-link' href='managecontent'>Manage Content</a></li>
-                        
-                        ";
-                    } else {
-                        echo " ";
-                    }
-
-                    ?>
-
-
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
+               
+                <ul class="headingdisplay nav navbar-nav navbar-right">
 
                     <?php
                     if (isset($_SESSION["name"])) {
@@ -118,9 +82,11 @@ include("config/global.php");
                         </li> ";
                     } else {
                         echo "
-                        <li><a href='contentcreator'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
-                        <li><a href='login' tite='Login'><span class='glyphicon glyphicon-log-in'></span> Login</a>
-
+                        <li><a class='heroactive' href='index'>Home</a></li>
+                        <li><a href='contentcreator' tite='Login'>Account</a>
+                        <li><a href='contact' tite='Login'>Contact</a>
+                        <li><a href='contentcreator'> Sign Up</a></li>
+                        <li><a href='login' tite='Login'> Login</a>
                         </li>
 
                         ";
@@ -134,28 +100,43 @@ include("config/global.php");
         </div>
     </nav>
 
-    <div class="intropge">
-        <!-- <div class="parent">
-            <div class="div1"> </div>
-            <div class="div2"> </div>
-            <div class="div3"> </div>
-            <div class="div4"> </div>
-            <div class="div5"> </div>
-            <div class="div6"> </div>
-        </div> -->
-        <div class="content bounce-top">
-            <h3>Artist Management Platform</h3>
-            <p>For Music, Podcast, Poems and Dj Content Management and Sharing</p>
+        <div class="content bounce-top mcontainer">
 
-            <button class="newartistbutton"><a href="contentcreator">New Artist</a></button>
-            <button class="enjoymusicbutton"><a href="../index">Enjoy Music</a></button>
+            <div class="lefthero">
+                <h6 class="smallheading">Mwonyaa</h6>
+                <div class="bigheading">
+                    <h1>ARTIST / LABEL</h1>
+                </div>
+
+                <div class="secondheading">
+                    <h2 class="smallbigheading">Management Platform</h2>
+                    <p class="herodescription">For Music, Podcast, Poems and Dj Content Management and Sharing</p>
+
+                </div>
+
+
+                <div class="herobuttons">
+                    <button class="newartistbutton"><a href="contentcreator">Signup</a></button>
+                    <button class="enjoymusicbutton"><a href="../index">Stream</a></button>
+                </div>
+
+
+            </div>
+
+            <div class="righthero">
+                <img src="heorimage.svg" alt="">
+            </div>
+
+            <div class="herodesignsvg">
+                <img src="herocircledesign.svg" alt="">
+            </div>
 
         </div>
     </div>
 
 
     <section class="sectioncontent newfeatured">
-        <div class="sectionbody">
+        <div class="mcontainer sectionbody">
 
             <div class="lefttextsection">
                 <h1>Your music. Your fans. Your team. All together now.</h1>
@@ -173,7 +154,7 @@ include("config/global.php");
 
     <section class="sectioncontent">
 
-        <div class="sectionbody">
+        <div class=" mcontainer sectionbody">
 
             <div class="lefttextsection">
                 <h1>Built For Artists</h1>
@@ -192,37 +173,44 @@ include("config/global.php");
 
     </section>
 
-    <div class="mycontainer">
+    <div class="testimony">
+        <div class="mcontainer ">
+            <div class=" mycontainer">
+                <div class="quote">
+                    <h5>Mwonyaa Songs</h5>
+                    <p>Be Able to add a song to a particular album for an Artist. All Songs should be within the required size
+                        and format </p>
 
-        <div class="quote">
-            <h5>Mwonyaa Songs</h5>
-            <p>Be Able to add a song to a particular album for an Artist. All Songs should be within the required size
-                and format </p>
+                </div>
+
+                <div class="quote">
+                    <h5>Mwonyaa Podcasts</h5>
+
+                    <p>Add Podcast Episode to the Already Created Podcast Album. Add Podcast Episode Descescription to Enable
+                        users to be more interested in your work </p>
+                </div>
+                <div class="quote">
+                    <h5>Mwonyaa Poems</h5>
+
+                    <p>Add your Poems with this tool and make sure to include elaborate Details to help users understand your
+                        work. </p>
+                </div>
+                <div class="quote">
+                    <h5>Mwonyaa Dj Mixtapes</h5>
+
+                    <p>All Dj Mixtapes and Nonstops are added through this button and please check the input fields carefully.
+
+                    </p>
+                </div>
+            </div>
+
+
+
 
         </div>
-
-        <div class="quote">
-            <h5>Mwonyaa Podcasts</h5>
-
-            <p>Add Podcast Episode to the Already Created Podcast Album. Add Podcast Episode Descescription to Enable
-                users to be more interested in your work </p>
-        </div>
-        <div class="quote">
-            <h5>Mwonyaa Poems</h5>
-
-            <p>Add your Poems with this tool and make sure to include elaborate Details to help users understand your
-                work. </p>
-        </div>
-        <div class="quote">
-            <h5>Mwonyaa Dj Mixtapes</h5>
-
-            <p>All Dj Mixtapes and Nonstops are added through this button and please check the input fields carefully.
-
-            </p>
-        </div>
-
-
     </div>
+
+
 
 
 </body>

@@ -1,12 +1,12 @@
 <?php
 
-$local = false;
+$local = true;
 
 if ($local) {
     $hostname = "localhost";
     $username = "root";
     $password = "";
-    $databasename = "mwonyaa";
+    $databasename = "mwonya";
 } else {
     $hostname = "178.79.148.46";
     $username = "streamerMwonyaa";
