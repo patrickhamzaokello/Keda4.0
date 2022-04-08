@@ -802,10 +802,11 @@ button:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   background-image: url(herobackvector.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 2em;
 }
 
 .navbar {
@@ -1019,6 +1020,7 @@ h3 {
   background-color: #43276200 !important;
   border: none;
   color: white !important;
+  padding-bottom: 1em;
 }
 
 .navbar-inverse .navbar-nav>li>a {
