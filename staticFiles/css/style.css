@@ -12,10 +12,10 @@
 
 
 body {
-  background: #1c0529;
+  background: #3a1d58;
   font-family: "Roboto", sans-serif;
   /* letter-spacing: 1px; */
-  /* background: #180026; */
+  /* background: #3a1d58; */
   height: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -31,10 +31,10 @@ body a:hover {
 }
 
 .header {
-  background: #1f102d;
+  background: #3a1d58;
   padding: 10px;
   color: #aaaaaa;
-  border-bottom: 1px solid #1f102d;
+  border-bottom: 1px solid #3a1d58;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -85,7 +85,7 @@ body a:hover {
 }
 
 .menucontext {
-  background: #180026;
+  background: #3a1d58;
   padding: 1em;
   width: 187px;
   box-shadow: 6px 6px 30px 0px #0e0213;
@@ -134,8 +134,9 @@ body a:hover {
 
 .navigation {
   padding: 15px;
-  background: #180026;
+  background: #3a1d58;
   color: #aaaaaa;
+  border-right: 1px solid #452a60;
   /* height: 64%; */
   height: calc(100% - 121px);
   height: -webkit-calc(100% - 121px);
@@ -169,7 +170,7 @@ body a:hover {
 }
 
 .playlisteditaction {
-  background: #180026;
+  background: #3a1d58;
   padding: 1em;
   width: 187px;
   box-shadow: 6px 6px 30px 0px #0e0213;
@@ -269,7 +270,7 @@ body a:hover {
 
 .mainplay {
   position: absolute;
-  color: #180026;
+  color: #3a1d58;
   top: 50%;
   left: 54%;
   font-size: 4rem;
@@ -296,7 +297,7 @@ body a:hover {
 
 .mainpause {
   position: absolute;
-  color: #180026;
+  color: #3a1d58;
   top: 50%;
   left: 50%;
   font-size: 4rem;
@@ -533,7 +534,7 @@ body a:hover {
 }
 
 .header .user__actions .dropdown-menu {
-  background: #180026;
+  background: #3a1d58;
   margin-top: 25px;
   border-radius: 2px;
   padding: 0;
@@ -808,7 +809,7 @@ body a:hover {
   display: grid;
   place-content: center;
   opacity: 0.7;
-  background-color: #180026;
+  background-color: #3a1d58;
   z-index: 999;
   text-align: center;
 }
@@ -1122,8 +1123,8 @@ ul {
 .content__right {
   width: 15%;
   /* margin-top: 51px; */
-  background: #180026;
-  border-bottom: 1px solid #1c0529;
+  background: #3a1d58;
+  border-bottom: 1px solid #452a60;
   height: calc(100vh - 51px - 46px);
   height: -webkit-calc(100vh - 51px - 46px);
   height: -moz-calc(100vh - 51px - 46px);
@@ -1387,7 +1388,7 @@ ul {
 }
 
 .pagesection > .sectioncontainer ~ .sectioncontainer {
-  border-top: 1px solid #212022;
+  border-top: 1px solid #452a60;
 
 }
 
@@ -1412,9 +1413,9 @@ ul {
 .playlist {
   padding: 15px;
   height: 7%;
-  background: #180026;
-  border-top: 1px solid #180026;
-  border-bottom: 1px solid #180026;
+  background: #3a1d58;
+  border-top: 1px solid #3a1d58;
+  border-bottom: 1px solid #3a1d58;
 }
 
 .playlist:hover {
@@ -1452,7 +1453,7 @@ ul {
   /* height: 26%; */
   height: 64px;
   width: 100%;
-  background: #180026;
+  background: #3a1d58;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1469,8 +1470,8 @@ ul {
 }
 
 .playing {
-  background: #180026;
-  border-bottom: 1px solid #180026;
+  background: #3a1d58;
+  border-bottom: 1px solid #3a1d58;
   display: flex;
   /* height: 10%; */
   height: 57px;
@@ -1564,7 +1565,7 @@ ul {
 }
 
 .current-track {
-  background: #1f102d;
+  background: #561795;
   padding: 5px 15px;
   display: flex;
   flex-flow: row wrap;
@@ -1572,7 +1573,7 @@ ul {
   width: 100%;
   bottom: 0;
   position: fixed;
-  /* min-width: 620px; */
+  height: 80px;
 }
 
 .current-track__actions {
@@ -1892,12 +1893,12 @@ ion-icon {
 
 .pkkkk {
   border-left: 2px solid yellow;
-  background: #180026;
+  background: #3a1d58;
 }
 
 .holdsongid{
   display: none;
-  background: #180026;
+  background: #3a1d58;
   outline: none;
   border: none;
 }
@@ -2120,7 +2121,7 @@ ion-icon {
   }
 
   .progressBarBg {
-    background-color: #1f102d;
+    background-color: #3a1d58;
   }
   .progressmade {
     background-color: rgb(233, 30, 99);
@@ -2308,8 +2309,8 @@ ion-icon {
   .playing {
     position: fixed;
     bottom: 55px;
-    background: #1f102d;
-    border-bottom: #1f102d;
+    background: #3a1d58;
+    border-bottom: #3a1d58;
     border: none;
     left: 33%;
     height: 70px;
@@ -2621,7 +2622,7 @@ ion-icon {
   }
 
   .progressBarBg {
-    background-color: #1f102d;
+    background-color: #3a1d58;
   }
   .progressmade {
     background-color: rgb(233, 30, 99);
@@ -2789,8 +2790,8 @@ ion-icon {
   .playing {
     position: fixed;
     bottom: 0;
-    background: #1f102d;
-    border-bottom: #1f102d;
+    background: #3a1d58;
+    border-bottom: #3a1d58;
     border: none;
     left: 33%;
     height: 70px;
@@ -3085,7 +3086,7 @@ ion-icon {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #1c0529ba;
+  background-color: #3a1d58ba;
 }
 
 .artist__header:after {
@@ -3310,7 +3311,7 @@ ion-icon {
   width: -webkit-calc(100% - 75px);
   width: -moz-calc(100% - 75px);
   padding: 10px 15px;
-  background: #180026;
+  background: #3a1d58;
   color: #aaaaaa;
   display: flex;
   flex-flow: column wrap;
@@ -3414,7 +3415,7 @@ ion-icon {
 }
 
 .tracks .track {
-  border-top: 1px solid #1f102d;
+  border-top: 1px solid #3a1d58;
   height: 42px;
   display: flex;
   padding: 0.4em 0;
@@ -3423,11 +3424,11 @@ ion-icon {
 }
 
 .tracks .track:hover {
-  background: #1f102d;
+  background: #3a1d58;
 }
 
 .tracks .track:last-child {
-  border-bottom: 1px solid #1f102d;
+  border-bottom: 1px solid #3a1d58;
 }
 
 .tracks .track__art img {
@@ -3557,13 +3558,13 @@ ion-icon {
 }
 
 .related-artists .related-artist {
-  background: #180026;
+  background: #3a1d58;
   padding: 5px;
   margin-bottom: 2px;
 }
 
 .related-artists .related-artist:hover {
-  background: #1f102d;
+  background: #3a1d58;
   text-decoration: none;
 }
 
@@ -3740,7 +3741,7 @@ ion-icon {
 }
 
 .chartSong {
-  background: #1f102d;
+  background: #3a1d58;
   /* border-bottom: 1px solid #181818; */
   display: flex;
   flex-flow: row nowrap;
@@ -4064,7 +4065,7 @@ button:hover {
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: #1f102d;
+  background: #3a1d58;
   border-radius: 5px;
   width: 30%;
   position: relative;
@@ -4205,7 +4206,7 @@ button:hover {
 }
 
 .noplaylistshared {
-  background: #1f102d;
+  background: #3a1d58;
   border-left: 1px solid white;
   padding: 1em;
 }
@@ -4474,7 +4475,7 @@ button:hover {
 .userDetails .usercontainer input[type="password"] {
   height: 50px;
   width: 100%;
-  background: #1f102d;
+  background: #3a1d58;
   border: none;
   font-size: 18px;
   font-weight: 300;

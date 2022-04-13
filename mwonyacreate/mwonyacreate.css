@@ -802,7 +802,7 @@ button:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
   background-image: url(herobackvector.svg);
   background-repeat: no-repeat;
   background-size: cover;

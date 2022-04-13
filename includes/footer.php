@@ -1,6 +1,6 @@
 </div>
 
-<div id="addisplay" class="adsectioncontainer">
+<!-- <div id="addisplay" class="adsectioncontainer">
   <div class="slideshow-container">
     <div class="adsmySlides fadeslide">
       <div class="slidenumbertext">1 / 3</div>
@@ -17,7 +17,7 @@
     </div>
 
   </div>
-</div>
+</div> -->
 
 </div>
 
