@@ -57,7 +57,7 @@ $(window).on("load", function () {
   $("#mainContent").show();
   // $("#loadingLoader").hide();
   $(".lds-facebook").hide();
-  $("#playlists").load("includes/playlistlistings.php");
+
 });
 
 function hidetoggleclickedit() {
@@ -352,7 +352,7 @@ function createPlaylist() {
 
       //do something when ajax returns
       openPage("playlists");
-      $("#playlists").load("includes/playlistlistings.php");
+    
     });
   }
 }
@@ -581,7 +581,7 @@ function improvedcreateplaylist() {
       $("#show_message")
         .fadeIn()
         .text("Playlist " + playlistname + " Created Successfully");
-      $("#playlists").load("includes/playlistlistings.php");
+    
     })
     .catch(console.error);
 }
@@ -613,7 +613,7 @@ function deletePlaylist(playlistId) {
       userLoggedIn: userLoggedIn,
     }).done(function (error) {
       openPage("playlists");
-      $("#playlists").load("includes/playlistlistings.php");
+    
     });
   }
 }
@@ -636,7 +636,7 @@ function renamePlaylist(playlistId) {
 
       //do something when ajax returns
       openPage("playlists");
-      $("#playlists").load("includes/playlistlistings.php");
+    
     });
   }
 }
@@ -657,7 +657,7 @@ function sharePlaylist(playlistId, sharetag) {
 
       //do something when ajax returns
       openPage("playlists");
-      $("#playlists").load("includes/playlistlistings.php");
+    
     });
   }
 }
@@ -678,13 +678,13 @@ function shareOnlyFriends(playlistId, sharetag) {
 
       //do something when ajax returns
       openPage("playlists");
-      $("#playlists").load("includes/playlistlistings.php");
+    
     });
   }
 }
 
 function refreshing() {
-  $("#playlists").load("includes/playlistlistings.php");
+
 }
 
 function hideOptionsMenu() {
@@ -881,6 +881,8 @@ function Audio() {
     $(".lds-dual-ring").css("display", "flex");
     $(".playing__art img").css("opacity", "40%");
   });
+
+
 
   this.audio.addEventListener("playing", function () {
     $(".lds-dual-ring").css("display", "none");
