@@ -10,7 +10,6 @@ $userId = $userLoggedIn->getUserId();
 ?>
 
 <script>
-    albumnavitem();
     $(".lds-facebook").hide();
     $("#mainContent").show();
 </script>

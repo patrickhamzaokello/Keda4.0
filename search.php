@@ -19,6 +19,63 @@ include("includes/queries/searchQuery.php")
     $("#mainContent").show();
 </script>
 
+
+<?php
+if (isset($_GET['term'])) {
+    $term = urldecode($_GET['term']);
+} else {
+    $term = "";
+}
+?>
+
+<script>
+$(".searchInput").focus();
+$(function() {
+
+    $(".searchInput").keyup(function() {
+        clearTimeout(timer);
+
+        $(".spinner img").css("visibility", "visible");
+
+
+        timer = setTimeout(function() {
+
+            var val = $(".searchInput").val();
+            openPage("search?term=" + val);
+        }, 2000)
+    });
+
+});
+
+function menuhandler() {
+    document.getElementById("navmenu").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("navchange");
+}
+</script>
+
+
+<section class="header">
+
+   
+
+    <div class="search">
+
+        <input type="text" name="searchinputfield" class="searchInput" value="<?php echo $term ?>" placeholder="Search"
+            onfocus="this.value = this.value" />
+
+        <span class="spinner"> <img src="assets/images/icons/spinner.gif" alt=""></span>
+        <div id="menu-bar">
+            <div id="navmenu" onclick="menuhandler()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 <?php if ($term == "") exit(); ?>
 
 <div class="pagesection">

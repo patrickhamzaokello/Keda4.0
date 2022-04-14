@@ -193,12 +193,6 @@ if (isset($_SESSION['userLoggedIn'])) {
 
 
 
-    <?php
-
-    include("includes/headingContainer.php");
-
-    ?>
-
     <section class="content">
 
         <?php

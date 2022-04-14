@@ -39,7 +39,6 @@ while ($row = mysqli_fetch_array($poemquery)) {
 
 ?>
 <script>
-    artistnavitem();
     $(".lds-facebook").hide();
     $("#mainContent").show();
 </script>

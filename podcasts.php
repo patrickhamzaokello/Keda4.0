@@ -27,7 +27,6 @@ while ($row = mysqli_fetch_array($djQuery)) {
 ?>
 
 <script>
-  podcastnavitem();
   $(".lds-facebook").hide();
   $("#mainContent").show();
 </script>

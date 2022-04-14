@@ -172,7 +172,6 @@ include("includes/includedFiles.php");
 <?php endif ?>
 
 <script>
-  djmixnavitem();
   var elmnt = document.getElementById("mainContent");
   elmnt.scrollTop = 0
 </script>

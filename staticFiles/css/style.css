@@ -1837,7 +1837,7 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   background-color: undefined;
-  background-color: #441c6c;
+  background-color: var(--leftnav);
   border-top: undefined;
   border-top: 1px solid #561795;
   bottom: 0;

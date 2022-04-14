@@ -31,23 +31,23 @@ require "includes/nowPlayingContainer.php";
 ?>
 
 <div class="mobilenavigation">
-  <span id="mobilealbumnavitem" href="#" class="nav__link nav__link--active" onclick="openPage('index');  albumnavitem()">
+  <span id="mobilealbumnavitem" href="#" class="nav__link nav__link--active" onclick="openPage('index'); ">
     <i class="material-icons nav__icon">dashboard</i>
     <span class="nav__text">Home</span>
   </span>
-  <span id="mobileartistnavitem" href="#" class="nav__link" onclick="openPage('library'); artistnavitem() ">
+  <span id="mobileartistnavitem" href="#" class="nav__link" onclick="openPage('library');  ">
     <i class="material-icons nav__icon">library_music</i>
     <span class="nav__text">Library</span>
   </span>
-  <span id="mobilepodcastnavitem" href="#" class="nav__link" onclick="openPage('podcasts');  podcastnavitem()">
+  <span id="mobilepodcastnavitem" href="#" class="nav__link" onclick="openPage('podcasts'); ">
     <i class="material-icons nav__icon">podcasts</i>
     <span class="nav__text">Podcast</span>
   </span>
-  <span id="mobiledjmixnavitem" href="#" class="nav__link" onclick="openPage('liveshows'); djmixnavitem()">
+  <span id="mobiledjmixnavitem" href="#" class="nav__link" onclick="openPage('liveshows'); ">
     <i class="material-icons nav__icon">live_tv</i>
     <span class="nav__text">Live</span>
   </span>
-  <span id="mobilepoemnavitem" href="#" class="nav__link" onclick="openPage('shop'); poemnavitem()">
+  <span id="mobilepoemnavitem" href="#" class="nav__link" onclick="openPage('shop'); ">
     <i class="material-icons nav__icon">shopping_bag</i>
     <span class="nav__text">Shop</span>
   </span>
