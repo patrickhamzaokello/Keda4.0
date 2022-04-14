@@ -9,7 +9,7 @@
   --al-background-color: #fce501;
   --al-disablebutton-color: #BEC7C7;
 
-  --mainbg: #442762;
+  --mainbg: #381b56;
   --leftnav: #381b56;
 }
 
@@ -808,14 +808,7 @@ dd, dl, dt, li, ol, ul {
 }
 
 .content {
-  /* display: flex;
-  height: calc(100vh - 51px - 46px);
-  height: -webkit-calc(100vh - 51px - 46px);
-  height: -moz-calc(100vh - 51px - 46px);
-  /* padding-bottom: 61px; */
-  /* flex-flow: row wrap;  */
   box-sizing: border-box;
-  padding-top: 51px;
   position: relative;
 }
 
@@ -1720,7 +1713,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 25%;
+  border-radius: 8%;
 }
 
 .reward {
@@ -1758,7 +1751,7 @@ ul {
   box-sizing: border-box;
   /* object-fit: contain; */
   object-fit: cover;
-  border-radius: 25%;
+  border-radius: 8%;
 }
 
 .playing__song {
@@ -1772,7 +1765,7 @@ ul {
 
 .playing__song>span {
   /* display: block; */
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.3333;
   white-space: nowrap
 }
