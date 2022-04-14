@@ -15,18 +15,22 @@
                 <div class="nano-content" tabindex="0" style="right: -12px;">
                     <div class="nano-content-ref">
                         <ul class="sidebar-nav-list" role="navigation" aria-label="Main Menu">
-                            <li class="sidebar-nav-item" onclick="openPage('index')"><a class="sidebar-nav-link is-main" href="#"><svg class="svg-icon" focusable="false" height="24" role="img" width="24" viewBox="0 0 24 24" aria-hidden="true">
+                            
+                        <li class="sidebar-nav-item" onclick="openPage('library')"><a class="sidebar-nav-link is-main" href="#"><svg class="svg-icon" focusable="false" height="24" role="img" width="24" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path clip-rule="evenodd" fill-rule="evenodd" d="M4 6h6.1v4H4V6zM3 6a1 1 0 0 1 1-1h6.1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6zm10.9 0H20v4h-6.1V6zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1V6zm-2.8 8H4v4h6.1v-4zM4 13a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6.1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4zm9.9 1H20v4h-6.1v-4zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1v-4z"></path>
+                                    </svg><span class="sidebar-nav-label">Explore</span></a></li>
+                        <li class="sidebar-nav-item" onclick="openPage('index')"><a class="sidebar-nav-link is-main" href="#"><svg class="svg-icon" focusable="false" height="24" role="img" width="24" viewBox="0 0 24 24" aria-hidden="true">
                                         <path clip-rule="evenodd" fill-rule="evenodd" d="M9 7.834V4.858l11-1.692v2.976L9 7.834zm11-.68L9 8.846V19c0 1.657-1.567 3-3.5 3S2 20.657 2 19s1.567-3 3.5-3c.98 0 1.865.345 2.5.9V4l12-1.846L21 2v15c0 1.657-1.567 3-3.5 3S14 18.657 14 17s1.567-3 3.5-3c.98 0 1.865.345 2.5.9V7.154zM17.5 15c1.53 0 2.5 1.035 2.5 2 0 .965-.97 2-2.5 2S15 17.965 15 17c0-.965.97-2 2.5-2zM8 19c0-.965-.97-2-2.5-2S3 18.035 3 19c0 .965.97 2 2.5 2S8 19.965 8 19z"></path>
                                     </svg><span class="sidebar-nav-label">Music</span></a></li>
                             <li class="sidebar-nav-item" onclick="openPage('podcasts')"><a class="sidebar-nav-link is-main" href="#"><svg class="svg-icon" focusable="false" height="24" role="img" width="24" viewBox="0 0 24 24" aria-hidden="true">
                                         <path clip-rule="evenodd" fill-rule="evenodd" d="M16 6a4 4 0 1 0-8 0h2.5a.5.5 0 0 1 0 1H8v1h2.5a.5.5 0 0 1 0 1H8v1h2.5a.5.5 0 0 1 0 1H8v1a4 4 0 0 0 8 0V6zm-4-5a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V6a5 5 0 0 0-5-5zM5 12H4a8 8 0 0 0 7.5 7.985V22H9v1h6v-1h-2.5v-2.015A8 8 0 0 0 20 12h-1a7 7 0 1 1-14 0z"></path>
                                     </svg><span class="sidebar-nav-label">Podcasts</span></a></li>
-                            <li class="sidebar-nav-item" onclick="openPage('library')"><a class="sidebar-nav-link is-main" href="#"><svg class="svg-icon" focusable="false" height="24" role="img" width="24" viewBox="0 0 24 24" aria-hidden="true">
+                                    <li class="sidebar-nav-item" onclick="openPage('liveshows')"><a class="sidebar-nav-link is-main" href="#"><svg class="svg-icon" focusable="false" height="24" role="img" width="24" viewBox="0 0 24 24" aria-hidden="true">
                                         <path clip-rule="evenodd" fill-rule="evenodd" d="M4 6h6.1v4H4V6zM3 6a1 1 0 0 1 1-1h6.1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6zm10.9 0H20v4h-6.1V6zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1V6zm-2.8 8H4v4h6.1v-4zM4 13a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6.1a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4zm9.9 1H20v4h-6.1v-4zm-1 0a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.1a1 1 0 0 1-1-1v-4z"></path>
-                                    </svg><span class="sidebar-nav-label">Explore</span></a></li>
+                                    </svg><span class="sidebar-nav-label">Live</span></a></li>
 
 
-
+ 
 
                             <li class="sidebar-nav-item" onclick="openPage('manageaccount')"><a class="sidebar-nav-link is-main" href="#">
 

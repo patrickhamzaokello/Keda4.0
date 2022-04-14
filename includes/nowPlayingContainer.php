@@ -600,12 +600,51 @@ if (isset($_SESSION['userLoggedIn'])) {
 
         <div class="middlebar">
             <div class="songmetatinfo">
-                <div class="playing__song">
+                <div class="track-heading">
+                    <div class="track-title">
+                        <div class="marquee" dir="ltr">
+                            <div class="marquee-wrapper">
+                                <div class="playing__song">
 
-                    <span role='link' tabindex='0' class=" marquee playing__song__name"></span>
+                                    <span role='link' tabindex='0' class=" marquee playing__song__name"></span>
 
-                    <span role='link' tabindex='0' class="playing__song__artist"></span>
+                                    - <span role='link' tabindex='0' class="playing__song__artist"></span>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="track-actions">
+                        <ul class="svg-icon-group">
+                            <li class="svg-icon-group-item"><button class="svg-icon-group-btn" type="button" aria-label="View lyrics">
+                                    <svg class="sk__sc-1vdzswr-0 bcVpWu" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 4.5C15 3.57174 14.6313 2.6815 13.9749 2.02513C13.3185 1.36875 12.4283 1 11.5 1C10.5717 1 9.6815 1.36875 9.02513 2.02513C8.36875 2.6815 8 3.57174 8 4.5C8 5.42826 8.36875 6.3185 9.02513 6.97487C9.6815 7.63125 10.5717 8 11.5 8C12.4283 8 13.3185 7.63125 13.9749 6.97487C14.6313 6.3185 15 5.42826 15 4.5V4.5ZM16 4.5C16 5.14155 15.8628 5.77568 15.5977 6.35987C15.3325 6.94406 14.9455 7.4648 14.4627 7.88718C13.9798 8.30955 13.4122 8.62379 12.7979 8.80882C12.1836 8.99385 11.5368 9.0454 10.901 8.96L3.048 15L0 12L7 4.42V4.5C7 3.30653 7.47411 2.16193 8.31802 1.31802C9.16193 0.474106 10.3065 0 11.5 0C12.6935 0 13.8381 0.474106 14.682 1.31802C15.5259 2.16193 16 3.30653 16 4.5V4.5ZM7.166 5.715L1.392 11.967L3.128 13.677L9.698 8.624C9.08707 8.35631 8.5431 7.95648 8.10527 7.45329C7.66745 6.95009 7.34665 6.35607 7.166 5.714V5.715Z" fill="white" />
+                                    </svg>
+
+                                </button></li>
+                            <li class="svg-icon-group-item">
+                                <div class="popper-wrapper"><button class="svg-icon-group-btn" type="button">
+                                        <svg class="sk__sc-1vdzswr-0 bcVpWu" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 0H8V7H1V8H8V15H9V8H16V7H9V0Z" fill="white" />
+                                        </svg>
+                                    </button></div>
+                            </li>
+                            <li class="svg-icon-group-item"><button class="svg-icon-group-btn option-btn" type="button" aria-label="Remove from Favourite tracks">
+                                    <svg class="sk__sc-1vdzswr-0 bcVpWu" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_104_30)">
+                                            <path d="M8.00021 3.26598C2.83721 -2.68002 -2.56379 4.57798 1.32821 8.51598C5.22021 12.451 8.00021 15 8.00021 15C8.00021 15 10.7802 12.452 14.6722 8.51498C18.5642 4.50098 13.1622 -2.67902 8.00021 3.26498V3.26598Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_104_30">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+
+                                </button></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>

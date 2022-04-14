@@ -8,14 +8,17 @@
   --al-light-color: #fff;
   --al-background-color: #fce501;
   --al-disablebutton-color: #BEC7C7;
+
+  --mainbg: #442762;
+  --leftnav: #381b56;
 }
 
 
 body {
-  background: #3a1d58;
+  background: var(--mainbg);
   font-family: "Roboto", sans-serif;
   /* letter-spacing: 1px; */
-  /* background: #3a1d58; */
+  /* background: var(--mainbg); */
   height: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -31,10 +34,10 @@ body a:hover {
 }
 
 .header {
-  background: #3a1d58;
+  background: var(--mainbg);
   padding: 10px;
   color: #aaaaaa;
-  border-bottom: 1px solid #3a1d58;
+  border-bottom: 1px solid var(--mainbg);
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -86,7 +89,7 @@ body a:hover {
 }
 
 .menucontext {
-  background: #3a1d58;
+  background: var(--mainbg);
   padding: 1em;
   width: 187px;
   box-shadow: 6px 6px 30px 0px #0e0213;
@@ -134,7 +137,7 @@ body a:hover {
 }
 
 .navigation {
-  background: #3a1d58;
+  background: var(--mainbg);
   color: #aaaaaa;
   border-right: 1px solid #452a60;
   overflow-y: hidden;
@@ -367,6 +370,11 @@ dd, dl, dt, li, ol, ul {
   color: #CBB0E7;
 }
 
+.page-sidebar .sidebar-nav-link:not(.is-main) {
+  color: #e8e8ff;
+  padding: 0 12px 0 48px;
+}
+
 .suggestions {
   color: #fff;
   text-decoration: underline;
@@ -391,7 +399,7 @@ dd, dl, dt, li, ol, ul {
 }
 
 .playlisteditaction {
-  background: #3a1d58;
+  background: var(--mainbg);
   padding: 1em;
   width: 187px;
   box-shadow: 6px 6px 30px 0px #0e0213;
@@ -491,7 +499,7 @@ dd, dl, dt, li, ol, ul {
 
 .mainplay {
   position: absolute;
-  color: #3a1d58;
+  color: var(--mainbg);
   top: 50%;
   left: 54%;
   font-size: 4rem;
@@ -518,7 +526,7 @@ dd, dl, dt, li, ol, ul {
 
 .mainpause {
   position: absolute;
-  color: #3a1d58;
+  color: var(--mainbg);
   top: 50%;
   left: 50%;
   font-size: 4rem;
@@ -756,7 +764,7 @@ dd, dl, dt, li, ol, ul {
 }
 
 .header .user__actions .dropdown-menu {
-  background: #3a1d58;
+  background: var(--mainbg);
   margin-top: 25px;
   border-radius: 2px;
   padding: 0;
@@ -826,6 +834,7 @@ dd, dl, dt, li, ol, ul {
   top: 0;
   width: 220px;
   z-index: 100;
+  background:  var(--leftnav);;
 }
 
 .lds-facebook {
@@ -1043,7 +1052,7 @@ dd, dl, dt, li, ol, ul {
   display: grid;
   place-content: center;
   opacity: 0.7;
-  background-color: #3a1d58;
+  background-color: var(--mainbg);
   z-index: 999;
   text-align: center;
 }
@@ -1376,7 +1385,7 @@ ul {
 .content__right {
   width: 15%;
   /* margin-top: 51px; */
-  background: #3a1d58;
+  background: var(--mainbg);
   border-bottom: 1px solid #452a60;
   height: calc(100vh - 51px - 46px);
   height: -webkit-calc(100vh - 51px - 46px);
@@ -1644,7 +1653,7 @@ ul {
 }
 
 .pagesection>.sectioncontainer~.sectioncontainer {
-  border-top: 1px solid #452a60;
+  border-top: 1px solid #633a8d;
 
 }
 
@@ -1668,9 +1677,9 @@ ul {
 .playlist {
   padding: 15px;
   height: 7%;
-  background: #3a1d58;
-  border-top: 1px solid #3a1d58;
-  border-bottom: 1px solid #3a1d58;
+  background: var(--mainbg);
+  border-top: 1px solid var(--mainbg);
+  border-bottom: 1px solid var(--mainbg);
 }
 
 .playlist:hover {
@@ -1725,8 +1734,8 @@ ul {
 }
 
 .playing {
-  background: #3a1d58;
-  border-bottom: 1px solid #3a1d58;
+  background: var(--mainbg);
+  border-bottom: 1px solid var(--mainbg);
   display: flex;
   /* height: 10%; */
   height: 57px;
@@ -1763,7 +1772,7 @@ ul {
 
 .playing__song>span {
   /* display: block; */
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.3333;
   white-space: nowrap
 }
@@ -1894,6 +1903,36 @@ ion-icon {
   justify-content: space-between;
   align-items: center;
 }
+
+
+.songmetatinfo .track-heading {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: undefined;
+  color: var(--text-primary);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 4px;
+  min-height: 32px;
+}
+
+.songmetatinfo .track-title {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 4px;
+  overflow: hidden;
+}
+.marquee {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+
 
 .current-track__progress__bar {
   width: 100%;
@@ -2370,12 +2409,12 @@ ul {
 
 .pkkkk {
   border-left: 2px solid yellow;
-  background: #3a1d58;
+  background: var(--mainbg);
 }
 
 .holdsongid {
   display: none;
-  background: #3a1d58;
+  background: var(--mainbg);
   outline: none;
   border: none;
 }
@@ -2598,7 +2637,7 @@ ul {
   }
 
   .progressBarBg {
-    background-color: #3a1d58;
+    background-color: var(--mainbg);
   }
 
   .progressmade {
@@ -2790,8 +2829,8 @@ ul {
   .playing {
     position: fixed;
     bottom: 55px;
-    background: #3a1d58;
-    border-bottom: #3a1d58;
+    background: var(--mainbg);
+    border-bottom: var(--mainbg);
     border: none;
     left: 33%;
     height: 70px;
@@ -3114,7 +3153,7 @@ ul {
   }
 
   .progressBarBg {
-    background-color: #3a1d58;
+    background-color: var(--mainbg);
   }
 
   .progressmade {
@@ -3286,8 +3325,8 @@ ul {
   .playing {
     position: fixed;
     bottom: 0;
-    background: #3a1d58;
-    border-bottom: #3a1d58;
+    background: var(--mainbg);
+    border-bottom: var(--mainbg);
     border: none;
     left: 33%;
     height: 70px;
@@ -3593,7 +3632,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #3a1d58ba;
+  background-color: var(--mainbg);
 }
 
 .artist__header:after {
@@ -3818,7 +3857,7 @@ ul {
   width: -webkit-calc(100% - 75px);
   width: -moz-calc(100% - 75px);
   padding: 10px 15px;
-  background: #3a1d58;
+  background: var(--mainbg);
   color: #aaaaaa;
   display: flex;
   flex-flow: column wrap;
@@ -3922,7 +3961,7 @@ ul {
 }
 
 .tracks .track {
-  border-top: 1px solid #3a1d58;
+  border-top: 1px solid var(--mainbg);
   height: 42px;
   display: flex;
   padding: 0.4em 0;
@@ -3931,11 +3970,11 @@ ul {
 }
 
 .tracks .track:hover {
-  background: #3a1d58;
+  background: var(--mainbg);
 }
 
 .tracks .track:last-child {
-  border-bottom: 1px solid #3a1d58;
+  border-bottom: 1px solid var(--mainbg);
 }
 
 .tracks .track__art img {
@@ -4065,13 +4104,13 @@ ul {
 }
 
 .related-artists .related-artist {
-  background: #3a1d58;
+  background: var(--mainbg);
   padding: 5px;
   margin-bottom: 2px;
 }
 
 .related-artists .related-artist:hover {
-  background: #3a1d58;
+  background: var(--mainbg);
   text-decoration: none;
 }
 
@@ -4248,7 +4287,7 @@ ul {
 }
 
 .chartSong {
-  background: #3a1d58;
+  background: var(--mainbg);
   /* border-bottom: 1px solid #181818; */
   display: flex;
   flex-flow: row nowrap;
@@ -4574,7 +4613,7 @@ button:hover {
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: #3a1d58;
+  background: var(--mainbg);
   border-radius: 5px;
   width: 30%;
   position: relative;
@@ -4718,7 +4757,7 @@ button:hover {
 }
 
 .noplaylistshared {
-  background: #3a1d58;
+  background: var(--mainbg);
   border-left: 1px solid white;
   padding: 1em;
 }
@@ -4989,7 +5028,7 @@ button:hover {
 .userDetails .usercontainer input[type="password"] {
   height: 50px;
   width: 100%;
-  background: #3a1d58;
+  background: var(--mainbg);
   border: none;
   font-size: 18px;
   font-weight: 300;
