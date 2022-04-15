@@ -152,7 +152,7 @@ include("includes/includedFiles.php");
                                     .parent()
                                     .addClass("pkkkk");
                                 $(".pkkkk").css("border-left", "2px solid yellow");
-                                $(".pkkkk").css("background", "#2c093a");
+                                $(".pkkkk").css("background", "#4b2078");
                             } else {
                                 $(".pkkkk").css("border-left", "none");
                                 $(".pkkkk").css("background", "none");

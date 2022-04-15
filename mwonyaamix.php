@@ -114,7 +114,7 @@ if ($songgenre) {
                 </div>
                 <div class="queuelist-content">
                     <div class="queuelist-header">
-                        <div class="queuelist-heading"><span class="queuelist-title">Mwonyaa Mix</span><span class="queuelist-subtitle"> · <?=  sizeof( $mwonyaamixarray )?> tracks </span></div>
+                        <div class="queuelist-heading"><span class="queuelist-title">Mwonyaa Mix</span><span class="queuelist-subtitle"> · <?= sizeof($mwonyaamixarray) ?> tracks </span></div>
                         <div class="popper-wrapper"><button type="button" class="sk__sc-1y6h0ji-0 bNQPvi"><span class="sk__sc-1y6h0ji-1 fZCKwv">Add to playlist</span></button></div>
                     </div>
 
@@ -137,8 +137,8 @@ if ($songgenre) {
                                             <?php $albumArtist = $albumSong->getArtist() ?>
                                             <?php $songAlbum = $albumSong->getAlbum() ?>
 
-                                            <div class="datagrid-row song is-first" data-key="140869465" draggable="true" itemprop="track" itemscope="" itemtype="http://schema.org/MusicRecording">
-                                                <div class="datagrid-cell datagrid-cell-action">
+                                            <div class="datagrid-row song is-first track" data-key="140869465" draggable="true" itemprop="track" itemscope="" itemtype="http://schema.org/MusicRecording">
+                                                <div class="datagrid-cell datagrid-cell-action" onclick='setTrack(<?= $albumSong->getId() ?>,tempPlaylist, true)'>
                                                     <div class="datagrid-cover datagrid-cover-hover">
                                                         <figure class="figurethumbnail">
                                                             <div class="picture overlay-hidden no-background"><img src="<?= $songAlbum->getArtworkPath() ?>" loading="lazy" alt="Skin - Rag'n'Bone Man" class="sk__sc-10y8cfp-0 xGwwo picture-img" height="28" width="28"></div>
@@ -150,14 +150,18 @@ if ($songgenre) {
                                                                     <path d="M2.495 0h2.01C4.778 0 5 .224 5 .5v11a.5.5 0 0 1-.495.5h-2.01A.498.498 0 0 1 2 11.5V.5a.5.5 0 0 1 .495-.5ZM7 .5a.5.5 0 0 1 .495-.5h2.01c.273 0 .495.224.495.5v11a.5.5 0 0 1-.495.5h-2.01A.498.498 0 0 1 7 11.5V.5Z"></path>
                                                                 </svg></span><span class="play-active"><span class="equalizer equalizer-inverse equalizer-12"></span></span></a></div>
                                                 </div>
-                                                <div class="datagrid-cell datagrid-cell-action cell-love"><button class="datagrid-action option-btn" type="button" aria-label="Add to favourite tracks"><svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 bcVpWu">
+                                                <div class="datagrid-cell datagrid-cell-action cell-love">
+                                                    <input type='hidden' class='songId' value='<?= $albumSong->getId() ?>'>
+                                                    <input type='hidden' class='artistId' value='<?= $albumArtist->getId() ?>'>
+                                                    <button class="datagrid-action option-btn" type="button" onclick='addSongLiked(this)' aria-label="Add to favourite tracks"><svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 bcVpWu">
                                                             <g>
                                                                 <path clip-rule="evenodd" fill-rule="evenodd" d="m8 4.79-.755-.869c-1.17-1.348-2.252-1.832-3.093-1.9-.836-.067-1.59.263-2.164.858C.802 4.108.528 6.283 2.04 7.812a245.96 245.96 0 0 0 4.775 4.7c.482.46.882.837 1.186 1.122.304-.285.704-.663 1.186-1.123a238.026 238.026 0 0 0 4.771-4.695 3.545 3.545 0 0 0 .057-4.963c-.572-.589-1.324-.915-2.161-.843-.843.072-1.926.562-3.098 1.911L8 4.791zm6.672 3.725C10.78 12.452 8 15 8 15s-2.78-2.548-6.672-6.485c-3.717-3.76 1.043-10.549 5.976-5.972.232.215.464.455.696.723.232-.267.464-.508.696-.723C13.63-2.04 18.39 4.68 14.672 8.515z"></path>
                                                                 <path d="m8 4.79-.755-.869c-1.17-1.348-2.252-1.832-3.093-1.9-.836-.067-1.59.263-2.164.858C.802 4.108.528 6.283 2.04 7.812a245.96 245.96 0 0 0 4.775 4.7c.482.46.882.837 1.186 1.122.304-.285.704-.663 1.186-1.123a238.026 238.026 0 0 0 4.771-4.695 3.545 3.545 0 0 0 .057-4.963c-.572-.589-1.324-.915-2.161-.843-.843.072-1.926.562-3.098 1.911L8 4.791zm6.672 3.725C10.78 12.452 8 15 8 15s-2.78-2.548-6.672-6.485c-3.717-3.76 1.043-10.549 5.976-5.972.232.215.464.455.696.723.232-.267.464-.508.696-.723C13.63-2.04 18.39 4.68 14.672 8.515z"></path>
                                                             </g>
-                                                        </svg></button></div>
+                                                        </svg></button>
+                                                </div>
                                                 <div class="datagrid-cell cell-title">
-                                                    <div class="ellipsis"><a itemprop="url" class="datagrid-label datagrid-label-main title" tabindex="0" role="button" href="/en/track/140869465"><span itemprop="name"><?= $albumSong->getTitle() ?></span></a></div>
+                                                    <div class="ellipsis" onclick="openPage('song?id=<?= $albumSong->getId() ?>')"><a itemprop="url" class="datagrid-label datagrid-label-main title" tabindex="0" role="button" href="#"><span itemprop="name"><?= $albumSong->getTitle() ?></span></a></div>
                                                 </div>
                                                 <div class="datagrid-cell datagrid-cell-hover datagrid-cell-action">
                                                     <div class="popper-wrapper"><button class="datagrid-action" type="button"><svg class="svg-icon svg-icon-options" focusable="false" height="12" role="img" width="12" viewBox="0 0 12 12" aria-hidden="true">
@@ -170,7 +174,7 @@ if ($songgenre) {
                                                             </g>
                                                         </svg></span></div>
                                                 <div class="datagrid-cell cell-artist">
-                                                    <div class="ellipsis"><a class="datagrid-label datagrid-label-main" itemprop="byArtist" title="Rag'n'Bone Man" href="/en/artist/4101559"><?= $albumArtist->getName() ?></a></div>
+                                                    <div class="ellipsis" onclick="openPage('artist?id=<?= $albumArtist->getId() ?>')"><a class="datagrid-label datagrid-label-main" itemprop="byArtist" title="Rag'n'Bone Man" href="#"><?= $albumArtist->getName() ?></a></div>
                                                 </div>
                                                 <div class="datagrid-cell cell-duration">
                                                     <meta itemprop="duration" content="PT3M59S"><span class="datagrid-label datagrid-label-idle ellipsis"><?= $albumSong->getDuration() ?></span>
@@ -245,7 +249,7 @@ if ($songgenre) {
             .parent()
             .addClass("pkkkk");
         $(".pkkkk").css("border-left", "2px solid yellow");
-        $(".pkkkk").css("background", "#2c093a");
+        $(".pkkkk").css("background", "#4b2078");
     } else {
         $(".pkkkk").css("border-left", "none");
         $(".pkkkk").css("background", "none");

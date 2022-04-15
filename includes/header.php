@@ -145,15 +145,7 @@ if (isset($_SESSION['userLoggedIn'])) {
     <!-- favicon end  -->
 
     <script>
-        // if ('serviceWorker' in navigator) {
-        //     window.addEventListener('load', () => {
-        //         navigator.serviceWorker
-        //             .register('sw_cache_mwonyaa_site.js')
-        //             .then(reg => console.log('Service worker: registered'))
-        //             .catch(err => console.log(`Failed to register service worker: ${err}`))
-        //     })
-        // };
-
+       
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw_cache_mwonyaa_site.js').then(function(registration) {
                 console.log('ServiceWorker registration successful!');

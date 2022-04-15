@@ -1234,7 +1234,7 @@ h3 {
 }
 
 .tracks .track {
-  border-top: 1px solid #2c093a;
+  border-top: 1px solid #4b2078;
   height: 42px;
   display: flex;
   flex-flow: row wrap;
@@ -1242,11 +1242,11 @@ h3 {
 }
 
 .tracks .track:hover {
-  background: #2c093a;
+  background: #4b2078;
 }
 
 .tracks .track:last-child {
-  border-bottom: 1px solid #2c093a;
+  border-bottom: 1px solid #4b2078;
 }
 
 .tracks .track__art img {
@@ -2412,7 +2412,7 @@ a {
   width: -webkit-calc(100% - 75px);
   width: -moz-calc(100% - 75px);
   padding: 10px 15px;
-  background: #2c093a;
+  background: #4b2078;
   color: #aaaaaa;
   display: flex;
   flex-flow: column wrap;

@@ -547,8 +547,8 @@ ul {
 }
 
 .playbuttondiv:hover {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   display: block;
   background: rgb(0 0 0 / 30%);
   /* border-radius: 50%; */
@@ -2067,12 +2067,13 @@ ion-icon {
   -ms-flex-align: center;
   align-items: center;
   border-bottom: undefined;
-  border-bottom: 1px solid var(--divider-primary);
+  /* border-bottom: 1px solid #542195; */
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 50px;
   min-height: 50px;
+  margin-bottom: 1em;
 }
 
 .queuelist-datagrid {
@@ -2145,6 +2146,28 @@ ion-icon {
   text-align: center;
   top: 0;
 }
+
+
+
+.datagrid-header .datagrid-row:after, .datagrid-header .datagrid-row:before, .datagrid-row:after, .datagrid-row:before {
+  background-color: #46127a;
+  height: 1px;
+  left: 6px;
+  position: absolute;
+  right: 6px;
+}
+
+.datagrid-row.is-first {
+  margin-top: 0;
+}
+
+.datagrid-row:before {
+  content: "";
+  top: 0;
+}
+
+
+
 
 .cell-play {
   display: -webkit-flex;
@@ -2433,7 +2456,8 @@ ion-icon {
 }
 
 .queuelist-cover-link {
-  color: currentColor;
+  color: #fff;
+  text-decoration: none !important;
 }
 
 .queuelist-cover-actions .svg-icon-group {
