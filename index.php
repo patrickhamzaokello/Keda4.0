@@ -51,10 +51,10 @@ $userId = $userLoggedIn->getUserId();
 
 
                         <li class="hs__item" role='link' tabindex='0' onclick="openPage('artist?id=<?= $row['id'] ?>')">
-                            <div class="hs__item__image__wrapper">
+                            <div class="hs__item__image__wrapper artistprofile">
                                 <img class="hs__item__image" src="<?= $artist->getProfilePath() ?>" alt="" />
                             </div>
-                            <div class="hs__item__description"><span class="hs__item__title"><?= $artist->getName() ?></span><span class="hs__item__subtitle"><?= $artist->getGenrename() ?></span></div>
+                            <div class="hs__item__description artistprofiledesc"><span class="hs__item__title"><?= $artist->getName() ?></span><span class="hs__item__subtitle"><?= $artist->getGenrename() ?></span></div>
                         </li>
 
 

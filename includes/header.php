@@ -101,6 +101,14 @@ if (isset($_SESSION['userLoggedIn'])) {
 }
 
 
+if (isset($_GET['term'])) {
+    $term = urldecode($_GET['term']);
+} else {
+    $term = "";
+}
+
+
+
 ?>
 
 
@@ -145,7 +153,6 @@ if (isset($_SESSION['userLoggedIn'])) {
     <!-- favicon end  -->
 
     <script>
-       
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw_cache_mwonyaa_site.js').then(function(registration) {
                 console.log('ServiceWorker registration successful!');
@@ -176,7 +183,30 @@ if (isset($_SESSION['userLoggedIn'])) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js" integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".searchInput").focus();
+        $(function() {
 
+            $(".searchInput").keyup(function() {
+                clearTimeout(timer);
+
+                $(".spinner img").css("visibility", "visible");
+
+
+                timer = setTimeout(function() {
+
+                    var val = $(".searchInput").val();
+                    openPage("search?term=" + val);
+                }, 2000)
+            });
+
+        });
+
+        function menuhandler() {
+            document.getElementById("navmenu").classList.toggle("change");
+            document.getElementById("nav").classList.toggle("navchange");
+        }
+    </script>
 
 
 </head>
@@ -193,7 +223,48 @@ if (isset($_SESSION['userLoggedIn'])) {
 
         ?>
 
+
+
         <div class="content__middle">
+
+            <div class="page-topbar" id="page_topbar">
+                <div class="topbar-search">
+                    <div class="popper-wrapper">
+
+                        <div id="menu-bar">
+                            <div id="navmenu" onclick="menuhandler()">
+                                <div id="bar1" class="bar"></div>
+                                <div id="bar2" class="bar"></div>
+                                <div id="bar3" class="bar"></div>
+                            </div>
+                        </div>
+
+                        <form class="topbar-search-form" autocomplete="off">
+                            <button class="topbar-search-submit" type="submit" aria-labelledby="topbar-search">
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 bcVpWu topbar-search-icon">
+                                    <g>
+                                        <path d="M13 7.5a5.5 5.5 0 1 0-11 0 5.5 5.5 0 0 0 11 0zm-1.43 5.07a6.5 6.5 0 1 1 .73-.685l2.054 2.054a.5.5 0 0 1-.708.707L11.57 12.57z"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                            <input name="searchinputfield" class="searchInput topbar-search-input" id="topbar-search" type="search" aria-label="Search" placeholder="Search" value="<?php echo $term ?>" onfocus="this.value = this.value" />
+                            <button class="topbar-search-clear" type="button" aria-hidden="true" aria-label="Clear">
+                                <svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 bcVpWu topbar-search-icon">
+                                    <g>
+                                        <path d="m8.002 8.71 6.295 6.294.707-.707L8.71 8.002l6.294-6.295L14.297 1 8.002 7.295 1.707 1 1 1.707l6.295 6.295L1 14.297l.707.707L8.002 8.71z"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                            <span class="spinner"> <img src="assets/images/icons/spinner.gif" alt=""></span>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="popper-wrapper topbar-action"><button class="topbar-notification" type="button" aria-label="Notifications"><svg class="svg-icon svg-icon-bell" focusable="false" height="18" role="img" width="18" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M6.003 0C6.513 0 7.029 0 7 1c1.569.196 2.992 1.677 3 3.5.009 1.957.16 3.293.856 3.854.091.073.144.183.144.3v.961a.385.385 0 0 1-.385.385h-9.23A.385.385 0 0 1 1 9.615v-.961c0-.117.053-.227.144-.3.697-.56.847-1.897.856-3.854.009-1.99 1.23-3.342 2.999-3.5-.015-1 .494-1 1.004-1ZM5 11.328 8 11l-.175.283c-.29.472-.733.717-1.305.717-.55 0-.982-.144-1.28-.437L5 11.328Z"></path>
+                        </svg><span class="badge badge-info topbar-notification-counter" aria-hidden="true">20</span></button></div>
+                <div class="popper-wrapper topbar-action"><button class="topbar-profile" type="button"><img class="topbar-profile-picture" src="https://e-cdns-images.dzcdn.net/images/user/aa2aafed44191a382cf31ba0239dd87f/32x32-000000-80-0-0.jpg" alt="patrick okello"></button></div>
+            </div>
             <div class="loadercentered">
                 <div class="lds-facebook">
                     <div></div>

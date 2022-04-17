@@ -134,37 +134,7 @@ $twitterusername = "@MwonyaaStream"
 
     </div>
 
-    <div class="artist__navigation">
-
-        <ul class="nav nav-tabs" role="tablist">
-
-            <li role="presentation" class="active">
-                <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab">Overview</a>
-            </li>
-
-            <!--<li role="presentation">
-                <a href="#artist-about" aria-controls="artist-about" role="tab" data-toggle="tab">About</a>
-              </li>-->
-
-        </ul>
-
-        <div class="artist__navigation__friends">
-
-            <a href="#">
-                <img src="assets/images/profile-pics/me.jpg" alt="" />
-            </a>
-
-            <a href="#">
-                <img src="assets/images/profile-pics/me.jpg" alt="" />
-            </a>
-
-            <a href="#">
-                <img src="assets/images/profile-pics/me.jpg" alt="" />
-            </a>
-
-        </div>
-
-    </div>
+    
 
 </div>
 

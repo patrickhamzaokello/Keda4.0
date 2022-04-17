@@ -56,13 +56,7 @@ if ($songgenre) {
 
     <div class='player-full' style="transform: translateY(0px); will-change: transform; transition-property: transform; transition-duration: 500ms; transition-timing-function: ease-in-out;">
         <div class="player-wrapper player-queuelist">
-            <div class="player-header">
-                <div class="player-close"><button class="svg-icon-group-btn" type="button" aria-label="Close panel"><svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 bcVpWu">
-                            <g>
-                                <path d="m8 11.5 6-6.277-.69-.723L8 10.054 2.691 4.5l-.69.723L8 11.5z"></path>
-                            </g>
-                        </svg></button></div>
-            </div>
+           
             <div class="player-container">
                 <div class="queuelist-cover">
                     <div class="queuelist-cover-thumbnail">
@@ -210,7 +204,7 @@ if ($songgenre) {
                                 </div>
                             </div>
                         </div>
-                        <div class="nano-pane" style="">
+                        <div class="nano-pane">
                             <div class="nano-slider" style="height: 70px; transform: translate(0px, 111.981px);"></div>
                         </div>
                     </div>
