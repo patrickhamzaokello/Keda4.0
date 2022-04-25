@@ -10,8 +10,6 @@ if (isset($_GET['id'])) {
 $album = new Album($con, $albumId);
 $artist = $album->getArtist();
 
-
-
 ?>
 <!-- headerends -->
 <script>
@@ -50,7 +48,7 @@ $artist = $album->getArtist();
                             <ul class="NV1uU">
                                 <li class="_3XRsF"><?php echo $album->getNumberOfSongs(); ?> tracks</li>
                                 <li class="_3XRsF">1 h 09 mins</li>
-                                <li class="_3XRsF"><?php echo $album->getDatecreated(); ?></li>
+                                <li class="_3XRsF"><?= $album->getDatecreated();  ?></li>
                                 <li class="_3XRsF">6,160 plays</li>
                             </ul>
                             <div class="_1k3N9">
@@ -116,9 +114,12 @@ $artist = $album->getArtist();
 
                             <div draggable="false" class="JoTQr" aria-rowindex="1" aria-selected="true" role="row" style="height: 56px;">
                                 <div class="ZLI1L _9H6uT _2LgeE">
+                                    
                                     <div class="_2ZGZ3 _9V_Tf _32dqv" role="gridcell">
+                                    <input type='hidden' class='songId' value='<?= $albumSong->getId() ?>'>
+                                        <input type='hidden' class='artistId' value='<?= $albumArtist->getId() ?>'>
                                         <div class="TY--6 zMvxh" onclick='setTrack("<?= $albumSong->getId() ?>",tempPlaylist, true)'>
-                                            <div class="_1ZxIr"><img src="https://e-cdns-images.dzcdn.net/images/cover/0fe8b5f354adfbb6734e208371436669/40x40-000000-80-0-0.jpg" height="40" width="40" alt=""></div>
+                                            <div class="_1ZxIr"><img src="<?php echo $album->getArtworkPath(); ?>" height="40" width="40" alt=""></div>
                                             <div class="_3-BPG _1H3xE"><button type="button" aria-label="Play Throwed by Chris Brown" class="sk__sc-1y6h0ji-0 lmagDO"><svg class="svg-icon svg-icon-play" focusable="false" height="1em" role="img" width="1em" viewBox="0 0 12 12" aria-hidden="true">
                                                         <path fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.5.5v11l9-5.5z"></path>
                                                     </svg></button></div>
@@ -127,9 +128,8 @@ $artist = $album->getArtist();
                                         <div class="_2tIhH">
                                             <div class="_1FlQH"><span class="BT3T6 LZV4h" data-testid="title"><?= $i ?>. <?= $albumSong->getTitle() ?></span></div>
                                         </div>
+                                        
                                         <div class="_3jkbz">
-                                            <input type='hidden' class='songId' value='<?= $albumSong->getId() ?>'>
-                                            <input type='hidden' class='artistId' value='<?= $albumArtist->getId() ?>'>
                                             <button onclick='addSongLiked(this)' type="button" aria-label="Add to Favorite tracks" class="sk__sc-1y6h0ji-0 fIWlJo"><svg viewBox="0 0 16 16" width="16" height="16" focusable="false" role="img" aria-hidden="true" class="sk__sc-1vdzswr-0 bcVpWu">
                                                     <g>
                                                         <path clip-rule="evenodd" fill-rule="evenodd" d="m8 4.79-.755-.869c-1.17-1.348-2.252-1.832-3.093-1.9-.836-.067-1.59.263-2.164.858C.802 4.108.528 6.283 2.04 7.812a245.96 245.96 0 0 0 4.775 4.7c.482.46.882.837 1.186 1.122.304-.285.704-.663 1.186-1.123a238.026 238.026 0 0 0 4.771-4.695 3.545 3.545 0 0 0 .057-4.963c-.572-.589-1.324-.915-2.161-.843-.843.072-1.926.562-3.098 1.911L8 4.791zm6.672 3.725C10.78 12.452 8 15 8 15s-2.78-2.548-6.672-6.485c-3.717-3.76 1.043-10.549 5.976-5.972.232.215.464.455.696.723.232-.267.464-.508.696-.723C13.63-2.04 18.39 4.68 14.672 8.515z"></path>
@@ -173,7 +173,7 @@ $artist = $album->getArtist();
                             </svg></div>
                     </div>
                 </div>
-                <div class="catalog-legal-notice">2007 | Jive</div>
+                <div class="catalog-legal-notice"><?= $album->getDatecreated();  ?></div>
             </div>
 
             <script>

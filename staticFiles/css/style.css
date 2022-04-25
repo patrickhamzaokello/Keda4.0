@@ -2203,7 +2203,7 @@ input {
 }
 
 ._1ZxIr {
-  background-color: #fff;
+  background-color: #381b56;
 }
 
 ._1ZxIr,
@@ -2373,6 +2373,12 @@ input {
 
 ._2LgeE {
   color: yellow;
+}
+
+.naboo-catalog .catalog-legal-notice {
+  color:  rgb(50, 15, 88);
+  font-size: 11px;
+  margin: 10px 0px 20px;
 }
 
 .page-sidebar .sidebar-header-logo,
