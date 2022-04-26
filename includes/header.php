@@ -24,7 +24,17 @@ if (isset($_SESSION['userLoggedIn'])) {
             $userId = $userLoggedIn->getUserId();
             $userrole = $userLoggedIn->getUserrole();
             $userRegstatus = $userLoggedIn->getUserStatus();
-            echo "<script>userLoggedIn = '$username'; </script>";
+            echo "<script>
+            userLoggedIn = '$username'; 
+            
+            </script>";
+            if ($userRegstatus === "registered") {
+                echo "
+                    <script>
+                    isRegistered = '$userRegstatus';
+                    
+                    </script>";
+            }
         } else {
             $username = $sessionusername;
             $userId = $sessionusername;
@@ -40,6 +50,13 @@ if (isset($_SESSION['userLoggedIn'])) {
             $userrole = $userLoggedIn->getUserrole();
             $userRegstatus = $userLoggedIn->getUserStatus();
             echo "<script>userLoggedIn = '$username'; </script>";
+            if ($userRegstatus === "registered") {
+                echo "
+                    <script>
+                    isRegistered = '$userRegstatus';
+                    
+                    </script>";
+            }
         } else {
             $username = 'Guest';
             $username = $username;
@@ -68,6 +85,14 @@ if (isset($_SESSION['userLoggedIn'])) {
             $userrole = $userLoggedIn->getUserrole();
             $userRegstatus = $userLoggedIn->getUserStatus();
             echo "<script>userLoggedIn = '$username'; </script>";
+
+            if ($userRegstatus === "registered") {
+                echo "
+                    <script>
+                    isRegistered = '$userRegstatus';
+                    
+                    </script>";
+            } 
         } else {
             $username = 'Guest';
             $username = $username;
@@ -91,6 +116,14 @@ if (isset($_SESSION['userLoggedIn'])) {
         $userrole = $userLoggedIn->getUserrole();
         $userRegstatus = $userLoggedIn->getUserStatus();
         echo "<script>userLoggedIn = '$username'; </script>";
+
+        if ($userRegstatus === "registered") {
+            echo "
+                <script>
+                isRegistered = '$userRegstatus';
+                
+                </script>";
+        } 
     } else {
         $username = $username;
         $userId = $username;

@@ -26,7 +26,7 @@ class Database
      * true -- in local developement
      * false -- in production development
      */
-    var $local = true;
+    var $local = false;
 
     function getConnString()
     {

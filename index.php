@@ -3,7 +3,7 @@
 include("includes/includedFiles.php");
 include("includes/queries/browsequery.php");
 
-$userId = $userLoggedIn->getUserId();
+// $userId = $userLoggedIn->getUserId();
 
 
 
