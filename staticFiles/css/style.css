@@ -27,6 +27,8 @@ body {
 ::before,
 ::after {
   box-sizing: border-box;
+  caret-color: rgba(0,0,0,0);
+  cursor: pointer;
 }
 
 body a {
