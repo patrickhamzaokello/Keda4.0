@@ -27,7 +27,7 @@ body {
 ::before,
 ::after {
   box-sizing: border-box;
-  caret-color: rgba(0,0,0,0);
+  caret-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
@@ -1892,13 +1892,10 @@ ul {
   display: flex;
 }
 
-
-
 ._2j25R {
   height: 172px;
   width: 172px;
 }
-
 
 @media (min-width: 1310px) {
   ._2j25R {
@@ -1935,7 +1932,6 @@ ul {
   }
 }
 
-
 ._2Rv6Z {
   background-color: #381b56;
   border-radius: 4px;
@@ -1954,7 +1950,6 @@ ul {
   height: 100%;
   width: 100%;
 }
-
 
 .fIa-dLY {
   height: 264px;
@@ -2379,7 +2374,7 @@ input {
 }
 
 .naboo-catalog .catalog-legal-notice {
-  color:  rgb(50, 15, 88);
+  color: rgb(50, 15, 88);
   font-size: 11px;
   margin: 10px 0px 20px;
 }
@@ -2406,7 +2401,6 @@ input {
 .logo-deezer-black {
   height: 32px;
   width: 125px;
- 
 }
 
 .logo-deezer-black img {
@@ -2517,7 +2511,6 @@ ul {
 ._2w27N {
   border-radius: 50%;
 }
-
 
 ._2Z2Jc {
   color: var(--main-text-color);
@@ -6521,7 +6514,7 @@ button:hover {
 }
 
 .userDetails {
-  padding: 20px;
+  padding: 20px 15%;
   width: 100%;
 }
 
@@ -6540,7 +6533,7 @@ button:hover {
 .userDetails .usercontainer input[type="password"] {
   height: 50px;
   width: 100%;
-  background: var(--mainbg);
+  background: #462e5e;
   border: none;
   font-size: 18px;
   font-weight: 300;
@@ -6561,10 +6554,17 @@ button:hover {
 }
 
 .userCenterSection {
-  text-align: center;
+  padding: 30px 15%;
+}
+
+input,
+select,
+textarea {
+  caret-color: rgb(255, 251, 0);
+}
+.useraccountinfo {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 1em;
 }
 
 .userInfo {
