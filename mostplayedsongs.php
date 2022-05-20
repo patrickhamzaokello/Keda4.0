@@ -13,71 +13,69 @@ include("includes/includedFiles.php"); ?>
 
     <div class="pagesection">
 
-        <div class="overview__albums__head">
+        <div class="pagecontainer">
 
-            <span class="section-title">Recently Played Songs</span>
 
-        </div>
 
-        <?php if ($recentSongIds) : ?>
-            <div class="entityInfo">
-                <div class="leftSection">
-                    <img src="assets/images/createdplaylist/mostplayed.png">
+            <?php if ($recentSongIds) : ?>
+                <div class="entityInfo">
+                    <div class="leftSection">
+                        <img src="assets/images/createdplaylist/mostplayed.png">
+                    </div>
+
+                    <div class="rightSection">
+                        <h2>Most Played</h2>
+
+                        <p>Find all the Songs you have Most Played Here</p>
+
+                        <button class="button-dark" onclick="playFirstSong()">
+                            <i class="ion-ios-play"></i>
+                            Play All
+                        </button>
+
+                    </div>
                 </div>
 
-                <div class="rightSection">
-                    <h2>Most Played</h2>
 
-                    <p>Find all the Songs you have Most Played Here</p>
+                <div class="album">
 
-                    <button class="button-dark" onclick="playFirstSong()">
-                        <i class="ion-ios-play"></i>
-                        Play All
-                    </button>
+                    <div class='album__tracks'>
 
-                </div>
-            </div>
+                        <div class='tracks'>
 
+                            <div class='tracks__heading'>
 
-            <div class="album">
+                                <div class='tracks__heading__number'>#</div>
 
-                <div class='album__tracks'>
+                                <div class='tracks__heading__title'>Song</div>
 
-                    <div class='tracks'>
+                                <div class='tracks__heading__length'>
 
-                        <div class='tracks__heading'>
+                                    <i class='ion-ios-stopwatch-outline'></i>
 
-                            <div class='tracks__heading__number'>#</div>
+                                </div>
 
-                            <div class='tracks__heading__title'>Song</div>
+                                <div class='tracks__heading__popularity'>
 
-                            <div class='tracks__heading__length'>
+                                    <i class='ion-thumbsup'></i>
 
-                                <i class='ion-ios-stopwatch-outline'></i>
+                                </div>
 
                             </div>
 
-                            <div class='tracks__heading__popularity'>
 
-                                <i class='ion-thumbsup'></i>
-
-                            </div>
-
-                        </div>
-
-
-                        <?php
+                            <?php
 
 
 
-                        $i = 1;
+                            $i = 1;
 
-                        foreach ($recentSongIds as $songId) {
+                            foreach ($recentSongIds as $songId) {
 
-                            $albumSong = new Song($con, $songId);
-                            $albumArtist = $albumSong->getArtist();
+                                $albumSong = new Song($con, $songId);
+                                $albumArtist = $albumSong->getArtist();
 
-                            echo "
+                                echo "
             <div class='track'>
 
               <div class='track__number'>$i</div>
@@ -121,66 +119,68 @@ include("includes/includedFiles.php"); ?>
 
             </div> ";
 
-                            $i = $i + 1;
-                        }
+                                $i = $i + 1;
+                            }
 
-                        ?>
+                            ?>
 
-                        <script>
-                            var tempSongIds = '<?php echo json_encode($recentSongIds); ?>';
-                            tempPlaylist = JSON.parse(tempSongIds);
+                            <script>
+                                var tempSongIds = '<?php echo json_encode($recentSongIds); ?>';
+                                tempPlaylist = JSON.parse(tempSongIds);
 
-                            $(".track__title .feature").attr("onclick",
-                                "openPage('artist?id=<?php echo $albumArtist->getId() ?>')");
+                                $(".track__title .feature").attr("onclick",
+                                    "openPage('artist?id=<?php echo $albumArtist->getId() ?>')");
 
 
-                            $("input[value=" + currentPlaylist[currentIndex] + "]")
-                                .parent()
-                                .parent()
-                                .addClass("pkkkk");
-                            $(".pkkkk").css("border-left", "none");
-                            $(".pkkkk").css("background", "none");
-
-                            if (
-                                $("input[value=" + currentPlaylist[currentIndex] + "]")
-                                .parent()
-                                .parent()
-                                .hasClass("pkkkk")
-                            ) {
-                                $(".track").removeClass("pkkkk");
                                 $("input[value=" + currentPlaylist[currentIndex] + "]")
                                     .parent()
                                     .parent()
                                     .addClass("pkkkk");
-                                $(".pkkkk").css("border-left", "2px solid yellow");
-                                $(".pkkkk").css("background", "#4b2078");
-                            } else {
                                 $(".pkkkk").css("border-left", "none");
                                 $(".pkkkk").css("background", "none");
 
-                                $(".track").removeClass("pkkkk");
-                            }
-                        </script>
+                                if (
+                                    $("input[value=" + currentPlaylist[currentIndex] + "]")
+                                    .parent()
+                                    .parent()
+                                    .hasClass("pkkkk")
+                                ) {
+                                    $(".track").removeClass("pkkkk");
+                                    $("input[value=" + currentPlaylist[currentIndex] + "]")
+                                        .parent()
+                                        .parent()
+                                        .addClass("pkkkk");
+                                    $(".pkkkk").css("border-left", "2px solid yellow");
+                                    $(".pkkkk").css("background", "#4b2078");
+                                } else {
+                                    $(".pkkkk").css("border-left", "none");
+                                    $(".pkkkk").css("background", "none");
 
+                                    $(".track").removeClass("pkkkk");
+                                }
+                            </script>
+
+
+                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
 
+            <?php else :  ?>
+                <div>
+                    <p> Listen to Music, and They will show up here. Checkout the Top Trending songs on Mwonyaa Here.
+                    <p>
 
-        <?php else :  ?>
-            <div>
-                <p> Listen to Music, and They will show up here. Checkout the Top Trending songs on Mwonyaa Here.
-                <p>
+                    <div class="suggestions" onclick="openPage('weeklytopsongs')">Trending This Week</div>
 
-                <div class="suggestions" onclick="openPage('weeklytopsongs')">Trending This Week</div>
+                </div>
+            <?php endif ?>
 
-            </div>
-        <?php endif ?>
-
+        </div>
     </div>
+
 
     <!-- options menu -->
 
@@ -196,32 +196,32 @@ include("includes/includedFiles.php"); ?>
         showPreviewDialog();
     </script>
 
-<div class="dismissable">
+    <div class="dismissable">
 
-<div class="dismissablecontent">
+        <div class="dismissablecontent">
 
-    <div class="previewimagecontainer">
-        <img src="assets/images/livethumbnails/premium.svg" alt="images">
-    </div>
+            <div class="previewimagecontainer">
+                <img src="assets/images/livethumbnails/premium.svg" alt="images">
+            </div>
 
-    <div class="dismissablecontentdesc">
+            <div class="dismissablecontentdesc">
 
-        <div class="dismissablecontenttext">
-            <h4>Mwonyaa Stream <span style="font-size: 14px;color: #8e65a2;font-weight: 500;">FEATURED</span></h4>
-            <h2>Most Listened Tracks</h2>
+                <div class="dismissablecontenttext">
+                    <h4>Mwonyaa Stream <span style="font-size: 14px;color: #8e65a2;font-weight: 500;">FEATURED</span></h4>
+                    <h2>Most Listened Tracks</h2>
 
-            <p>Find the top tracks that has been your most Listened to on Mwonyaa Stream. Create an account to use this feature and many more.</p>
+                    <p>Find the top tracks that has been your most Listened to on Mwonyaa Stream. Create an account to use this feature and many more.</p>
+                </div>
+
+                <div class="dismissablecontentbutton">
+                    <button class="liveshowbtn" onclick="createAccount();">Create Account</button>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="dismissablecontentbutton">
-            <button class="liveshowbtn" onclick="createAccount();">Create Account</button>
-        </div>
-
     </div>
-
-</div>
-
-</div>
 
 
 <?php endif ?>

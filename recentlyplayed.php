@@ -14,11 +14,9 @@ include("includes/includedFiles.php");
 
     <div class="pagesection">
 
-        <div class="overview__albums__head">
+        <div class="pagecontainer">
 
-            <span class="section-title">Recently Played Songs</span>
 
-        </div>
 
         <?php if ($recentSongIds) : ?>
             <div class="entityInfo">
@@ -178,6 +176,8 @@ include("includes/includedFiles.php");
 
             </div>
         <?php endif ?>
+        </div>
+
 
     </div>
 

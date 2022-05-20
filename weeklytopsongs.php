@@ -15,61 +15,58 @@ include("includes/queries/weeklytopsongs.php");
 
 <div class="pagesection">
 
-    <div class="overview__albums__head">
+    <div class="pagecontainer">
+   
 
-        <span class="section-title">Weekly Top 10 Songs</span>
+        <?php if ($recentSongIds) : ?>
+            <div class="entityInfo">
+                <div class="leftSection">
+                    <img src="assets/images/createdplaylist/weekly.png">
+                </div>
 
-    </div>
+                <div class="rightSection">
+                    <h2>Trending Songs</h2>
 
-    <?php if ($recentSongIds) : ?>
-        <div class="entityInfo">
-            <div class="leftSection">
-                <img src="assets/images/createdplaylist/weekly.png">
+                    <p>Find all the Songs topping the charts this week Here</p>
+
+                    <button class="button-dark" onclick="playFirstSong()">
+                        <i class="ion-ios-play"></i>
+                        Play All
+                    </button>
+
+                </div>
             </div>
 
-            <div class="rightSection">
-                <h2>Trending Songs</h2>
 
-                <p>Find all the Songs topping the charts this week Here</p>
+            <div class="album">
 
-                <button class="button-dark" onclick="playFirstSong()">
-                    <i class="ion-ios-play"></i>
-                    Play All
-                </button>
+                <div class='album__tracks'>
 
-            </div>
-        </div>
+                    <div class='tracks'>
 
+                        <div class='tracks__heading'>
 
-        <div class="album">
+                            <div class='tracks__heading__number'>#</div>
 
-            <div class='album__tracks'>
+                            <div class='tracks__heading__title'>Song</div>
 
-                <div class='tracks'>
+                            <div class='tracks__heading__length'>
 
-                    <div class='tracks__heading'>
+                                <i class='ion-ios-stopwatch-outline'></i>
 
-                        <div class='tracks__heading__number'>#</div>
+                            </div>
 
-                        <div class='tracks__heading__title'>Song</div>
+                            <div class='tracks__heading__popularity'>
 
-                        <div class='tracks__heading__length'>
+                                <i class='ion-thumbsup'></i>
 
-                            <i class='ion-ios-stopwatch-outline'></i>
+                            </div>
 
                         </div>
 
-                        <div class='tracks__heading__popularity'>
+                        <?php if ($recentSongIds) : ?>
 
-                            <i class='ion-thumbsup'></i>
-
-                        </div>
-
-                    </div>
-
-                    <?php if ($recentSongIds) : ?>
-
-                        <?php $i = 1;?>
+                            <?php $i = 1; ?>
 
 
                             <?php
@@ -86,18 +83,18 @@ include("includes/queries/weeklytopsongs.php");
 
                                 <div class='track'>
 
-                                    <div class='track__number'><?=$i?></div>
+                                    <div class='track__number'><?= $i ?></div>
 
                                     <div class='track__added'>
 
-                                        <i class='ion-play playsong ' onclick='setTrack("<?=$albumSong->getId()?>",tempPlaylist, true)'></i>
+                                        <i class='ion-play playsong ' onclick='setTrack("<?= $albumSong->getId() ?>",tempPlaylist, true)'></i>
 
                                     </div>
 
                                     <div class='track__added'>
 
-                                        <input type='hidden' class='songId' value="<?=$albumSong->getId()?>">
-                                        <input type='hidden' class='artistId' value="<?=$albumArtist->getId()?>">
+                                        <input type='hidden' class='songId' value="<?= $albumSong->getId() ?>">
+                                        <input type='hidden' class='artistId' value="<?= $albumArtist->getId() ?>">
 
 
                                         <i class='ion-heart' onclick="addSongLiked(this)"></i>
@@ -105,19 +102,19 @@ include("includes/queries/weeklytopsongs.php");
                                     </div>
 
                                     <div class='track__title featured'>
-                                        <span class='title' value="<?=$albumSong->getId()?>" onclick='setTrack("<?=$albumSong->getId()?>",tempPlaylist, true)'><?=$albumSong->getTitle()?></span>
-                                        <span class='feature' value="<?=$albumArtist->getId()?>" onclick='openPage("artist?id=<?=$albumArtist->getId()?>")'><?=$albumArtist->getName()?></span>
+                                        <span class='title' value="<?= $albumSong->getId() ?>" onclick='setTrack("<?= $albumSong->getId() ?>",tempPlaylist, true)'><?= $albumSong->getTitle() ?></span>
+                                        <span class='feature' value="<?= $albumArtist->getId() ?>" onclick='openPage("artist?id=<?= $albumArtist->getId() ?>")'><?= $albumArtist->getName() ?></span>
                                     </div>
 
                                     <div class='track__more'>
 
-                                        <input type='hidden' class='songId' value="<?=$albumSong->getId()?>">
+                                        <input type='hidden' class='songId' value="<?= $albumSong->getId() ?>">
 
                                         <i class='ion-more' onclick='showOptionsMenu(this)'></i>
 
                                     </div>
 
-                                    <div class='track__length'><?=$albumSong->getDuration()?></div>
+                                    <div class='track__length'><?= $albumSong->getDuration() ?></div>
 
                                     <div class='track__popularity'>
 
@@ -125,9 +122,9 @@ include("includes/queries/weeklytopsongs.php");
 
                                     </div>
 
-                                </div> 
+                                </div>
 
-                                <?php $i = $i + 1;?>
+                                <?php $i = $i + 1; ?>
 
 
                             <?php endforeach ?>
@@ -138,71 +135,72 @@ include("includes/queries/weeklytopsongs.php");
 
 
 
-                    <?php else :  ?>
-                        Working on Getting Dj Mixes Curated for You
-                    <?php endif ?>
+                        <?php else :  ?>
+                            Working on Getting Dj Mixes Curated for You
+                        <?php endif ?>
 
 
 
 
-                    <script>
-                        var tempSongIds = '<?php echo json_encode($recentSongIds); ?>';
-                        tempPlaylist = JSON.parse(tempSongIds);
+                        <script>
+                            var tempSongIds = '<?php echo json_encode($recentSongIds); ?>';
+                            tempPlaylist = JSON.parse(tempSongIds);
 
 
 
 
-                        var elmnt = document.getElementById("mainContent");
+                            var elmnt = document.getElementById("mainContent");
 
-                        elmnt.scrollTop = 0;
+                            elmnt.scrollTop = 0;
 
 
 
-                        $("input[value=" + currentPlaylist[currentIndex] + "]")
-                            .parent()
-                            .parent()
-                            .addClass("pkkkk");
-                        $(".pkkkk").css("border-left", "none");
-                        $(".pkkkk").css("background", "none");
-
-                        if (
-                            $("input[value=" + currentPlaylist[currentIndex] + "]")
-                            .parent()
-                            .parent()
-                            .hasClass("pkkkk")
-                        ) {
-                            $(".track").removeClass("pkkkk");
                             $("input[value=" + currentPlaylist[currentIndex] + "]")
                                 .parent()
                                 .parent()
                                 .addClass("pkkkk");
-                            $(".pkkkk").css("border-left", "2px solid yellow");
-                            $(".pkkkk").css("background", "#4b2078");
-                        } else {
                             $(".pkkkk").css("border-left", "none");
                             $(".pkkkk").css("background", "none");
 
-                            $(".track").removeClass("pkkkk");
-                        }
-                    </script>
+                            if (
+                                $("input[value=" + currentPlaylist[currentIndex] + "]")
+                                .parent()
+                                .parent()
+                                .hasClass("pkkkk")
+                            ) {
+                                $(".track").removeClass("pkkkk");
+                                $("input[value=" + currentPlaylist[currentIndex] + "]")
+                                    .parent()
+                                    .parent()
+                                    .addClass("pkkkk");
+                                $(".pkkkk").css("border-left", "2px solid yellow");
+                                $(".pkkkk").css("background", "#4b2078");
+                            } else {
+                                $(".pkkkk").css("border-left", "none");
+                                $(".pkkkk").css("background", "none");
 
+                                $(".track").removeClass("pkkkk");
+                            }
+                        </script>
+
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
 
+        <?php else :  ?>
+            <div>
+                <p> Listen to Music, and They will show up here. Checkout the Top Trending songs on Mwonyaa Here.
+                <p>
 
-    <?php else :  ?>
-        <div>
-            <p> Listen to Music, and They will show up here. Checkout the Top Trending songs on Mwonyaa Here.
-            <p>
+                <div class="suggestions" onclick="openPage('weeklytopsongs')">Trending This Week</div>
 
-            <div class="suggestions" onclick="openPage('weeklytopsongs')">Trending This Week</div>
-
-        </div>
-    <?php endif ?>
+            </div>
+        <?php endif ?>
+    </div>
 
 </div>
 

@@ -6,6 +6,7 @@
 
 <?php
 include("includes/includedFiles.php"); ?>
+    <div class="pagecontainer">
 
 
 <?php if ($userRegstatus === "registered") : ?>
@@ -24,13 +25,7 @@ include("includes/includedFiles.php"); ?>
 
     <?php if ($songIdArray) : ?>
 
-      <div class="overview__albums__head">
-
-        <span class="section-title">Your Liked Songs</span>
-
-
-
-      </div>
+    
 
       <div class="entityInfo">
         <div class="leftSection">
@@ -204,6 +199,7 @@ include("includes/includedFiles.php"); ?>
 <?php endif ?>
 
 
+</div>
 
 <script>
   var elmnt = document.getElementById("mainContent");
