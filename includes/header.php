@@ -321,11 +321,8 @@ if (isset($_GET['term'])) {
                     </button></div>
             </div>
             <div class="loadercentered">
-                <div class="lds-facebook">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+               
+                <div class="lds-facebook"><div></div><div></div><div></div><div></div></div>
             </div>
             <div class="showdialogbox">
                 <!-- alertmessage -->
