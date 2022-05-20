@@ -530,6 +530,7 @@ ul {
 .page-topbar .topbar-search-input {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  caret-color: rgb(127 3 255);
   color: #f3e8f9;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -1312,13 +1313,13 @@ textarea {
   -ms-overflow-style: none;
   /* IE 10+ */
   -webkit-overflow-scrolling: touch;
-  margin: 0 -20px;
 }
 
 .hs__header {
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 0 20px;
 }
 
 .hs__headline {
@@ -5693,9 +5694,7 @@ ul {
 
 .pagesection {
   width: 100%;
-  padding: 0 20px;
   overflow-x: hidden;
-  padding-top: 20px;
 }
 
 .artistalbums {

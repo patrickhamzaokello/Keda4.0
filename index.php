@@ -279,52 +279,7 @@ include("includes/queries/browsequery.php");
             <?php endif ?>
         </div>
     </div>
-    <div class="sectioncontainer">
-        <div class="hs__wrapper">
-            <div class="hs__header">
-                <div class="sectionheadingroup">
-                    <h5><span class="hs__item__subtitle">Recently Updated</span></h5>
-                    <h2 class="hs__headline">Mwonyaa Poems</h2>
-                </div>
-                <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a class="arrow arrow-next"></a></div>
-            </div>
-            <?php if ($poemsarray) : ?>
-
-                <ul class="hs">
-
-                    <?php
-                    foreach ($poemsarray as $row) :
-
-                    ?>
-
-                        <?php
-                        $album = new Album($con, $row['id']);
-                        $artist = $album->getArtist();
-                        ?>
-
-
-                        <li class="hs__item" role='link' tabindex='0' onclick="openPage('mediacollection?id=<?= $row['id'] ?>')">
-                            <div class="hs__item__image__wrapper">
-                                <img class="hs__item__image" src="<?= $row['artworkPath'] ?>" alt="" />
-                            </div>
-                            <div class="hs__item__description"><span class="hs__item__title"><?= $row['title'] ?></span><span class="hs__item__subtitle"><?= $artist->getName() ?></span></div>
-                        </li>
-
-
-                    <?php endforeach ?>
-
-
-
-                </ul>
-
-
-
-
-            <?php else :  ?>
-                Working on Getting Poems Curated for You
-            <?php endif ?>
-        </div>
-    </div>
+    
 
     <script>
         $(function() {

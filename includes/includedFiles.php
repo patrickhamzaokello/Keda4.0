@@ -2,6 +2,7 @@
 
 if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 
+
     require "includes/config.php";
     require "includes/classes/User.php";
     require "includes/classes/Artist.php";
@@ -16,19 +17,26 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && !empty($_SERVER['HTTP_X_REQUESTE
     $db = new Database();
     $con = $db->getConnString();
 
-
     if (isset($_SESSION['userLoggedIn'])) {
-        $userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
-        $userrole = $userLoggedIn->getUserrole();
-        $userRegstatus = $userLoggedIn->getUserStatus();
-
-        if ($userRegstatus === "registered") {
+        if ($_SESSION['userLoggedIn'] === "Guest") {
             echo "
+                <script>
+                isRegistered = 'Guest';
+                
+                </script>";
+            $userRegstatus = $_SESSION['userLoggedIn'];
+        } else {
+            $userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
+            $userrole = $userLoggedIn->getUserrole();
+            $userRegstatus = $userLoggedIn->getUserStatus();
+
+            if ($userRegstatus === "registered") {
+                echo "
                 <script>
                 isRegistered = '$userRegstatus';
                 
                 </script>";
-        } else {
+            }
         }
     } else {
         echo "
