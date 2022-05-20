@@ -2404,18 +2404,14 @@ input {
 }
 
 .logo-deezer-black {
-  background-image: url(../logo/mwonyaa_logo.png);
   height: 32px;
   width: 125px;
-  -webkit-transition-duration: 0s;
-  transition-duration: 0s;
-  -webkit-transition-property: background-image;
-  transition-property: background-image;
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear;
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-  background-repeat: no-repeat;
+ 
+}
+
+.logo-deezer-black img {
+  width: 100%;
+  height: 100%;
 }
 
 .logo {
@@ -5133,7 +5129,7 @@ ul {
   color: #a1a1a1;
   height: 100%;
   overflow-y: auto;
-  margin-top: 50px;
+  padding-top: 70px;
 }
 
 .artist__header {

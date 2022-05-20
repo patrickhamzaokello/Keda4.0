@@ -4,7 +4,9 @@
 
         <div class="page-sidebar" id="page_sidebar">
             <div class="sidebar-header">
-                <div class="sidebar-header-logo"><a class="logo logo-deezer-black" aria-label="Mwonyaa Music" href="#"></a></div>
+                <div class="sidebar-header-logo"><a class="logo logo-deezer-black" aria-label="Mwonyaa Music" href="#">
+                    <img src="staticFiles/logo/mwonyaa_logo.png" alt="">
+                </a></div>
                 <!-- <div class="conversion-banner">
                     <p class="conversion-banner-description">You're on Mwonyaa Free. Upgrade &amp; skip ads free for 1 month</p><a role="button" tabindex="0" href="https://www.deezer.com/en/offers?origin=CONVERSION_BANNER" target="_blank" class="sk__sc-1y6h0ji-0 leFCBY"><span class="sk__sc-1y6h0ji-1 fZCKwv">SUBSCRIBE</span></a>
                 </div> -->

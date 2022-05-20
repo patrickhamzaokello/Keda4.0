@@ -7,15 +7,6 @@
 <?php
 include("includes/includedFiles.php"); ?>
 
-<?php 
-if ($userRegstatus === "registered") {
-  echo "reg";
-} else {
-  echo "no reg";
-
-}
-
-?>
 
 <?php if ($userRegstatus === "registered") : ?>
   <?php
