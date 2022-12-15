@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #381b56;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sharecontainer {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.sharecontainer .sharecard {
+  background: #3d1c5e;
+  padding: 3em;
+  border-radius: 13px;
+  -webkit-box-shadow: 1px 3px 13px 1px #371956;
+          box-shadow: 1px 3px 13px 1px #371956;
+}
+
+.sharecontainer .sharecard .trackimage {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.sharecontainer .sharecard .trackimage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.sharecontainer .sharecard .trackinformation {
+  text-align: center;
+}
+
+.sharecontainer .sharecard .trackinformation .tracktitle {
+  font-size: 1.2em;
+  color: white;
+}
+
+.sharecontainer .sharecard .trackinformation .trackArtist {
+  font-size: 1em;
+  color: #d3c9fd;
+  margin-top: 0.2em;
+}
+
+.sharecontainer .sharecard .trackinformation .songviewdescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  margin-bottom: 0.5em;
+  margin-top: 0.4em;
+}
+
+.sharecontainer .sharecard .trackinformation .songviewdescription p {
+  color: #b9a6d3;
+  padding: 0.5em;
+}
+
+.sharecontainer .sharecard .trackinformation .songviewdescription span {
+  color: #765c98;
+  margin-right: 0.2em;
+}
+
+.sharecontainer .sharecard .playerView {
+  padding: 1em 0;
+}
+
+.sharecontainer .sharecard .playerView .audio-player {
+  width: 470px;
+  padding: 9px 20px;
+  margin: auto;
+  background-color: #3d1c5e;
+  border: 1px solid #563e86;
+}
+
+.sharecontainer .sharecard .playerView .audio-player .player-controls {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sharecontainer .sharecard .playerView .audio-player #radioIcon {
+  width: 30px;
+  height: 30px;
+  background: url("logo.svg") no-repeat center;
+  background-size: contain;
+}
+
+.sharecontainer .sharecard .playerView .audio-player #playAudio {
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: url("play.svg") no-repeat center;
+  background-size: contain;
+}
+
+.sharecontainer .sharecard .playerView .audio-player #playAudio.pause {
+  background: url("pause.svg") no-repeat center;
+  background-size: contain;
+}
+
+.sharecontainer .sharecard .playerView .audio-player p {
+  margin: 0 0 0 5px;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.sharecontainer .sharecard .playerView .audio-player p small {
+  font-size: 10px;
+  color: #ebe1fd;
+}
+
+.sharecontainer .sharecard .playerView .audio-player #seekObjContainer {
+  position: relative;
+  width: 300px;
+  margin: 0 5px;
+  height: 5px;
+}
+
+.sharecontainer .sharecard .playerView .audio-player #seekObjContainer #seekObj {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ebe1fd;
+  border: 1px solid #4a3075;
+}
+
+.sharecontainer .sharecard .playerView .audio-player #seekObjContainer #seekObj #percentage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #ff0063;
+}
+
+.sharecontainer .sharecard .songviewshareaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sharecontainer .sharecard .songviewshareaction a {
+  width: 100%;
+  margin: 5px;
+  /* or whatever you like */
+  text-decoration: none;
+  padding: 18px 23px;
+  border-radius: 41px;
+  text-align: center;
+}
+
+.sharecontainer .sharecard .songviewshareaction .downloadbtn {
+  color: white;
+  background: #4d3778;
+}
+
+.sharecontainer .sharecard .songviewshareaction .playtrack {
+  color: #4d3778;
+  background: #ede3ff;
+}
+
+.sharecontainer .sharecard .linkmwonyaa {
+  color: #e7e7e7;
+  text-align: center;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin-top: 1em;
+}
+/*# sourceMappingURL=main.css.map */
