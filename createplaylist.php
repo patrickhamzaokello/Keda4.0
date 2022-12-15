@@ -17,6 +17,7 @@ include("includes/includedFiles.php");
         <h5>Create New Playlist! </h5>
         <p>Create new Playlist and Add you Music to it.</p>
     </div>
+    
 
 
     <form action="javascript:void(0)" onsubmit="improvedcreateplaylist()" method="post" id="ajax-form">

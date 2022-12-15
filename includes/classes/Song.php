@@ -15,6 +15,9 @@
         private $plays;
         private $weekplays;
 
+        private $tag;
+        private $dateAdded;
+
         public function __construct($con , $id) {
             $this->con = $con;
             $this->id = $id;
@@ -31,6 +34,8 @@
                 $this->path = null;
                 $this->plays = null;
                 $this->weekplays = null;
+                $this->tag = null;
+                $this->dateAdded = null;
                 return false;
             }
 
@@ -45,12 +50,15 @@
                 $this->path = $this->mysqliData['path'];
                 $this->plays = $this->mysqliData['plays'];
                 $this->weekplays = $this->mysqliData['weekplays'];
-
+                $this->tag = $this->mysqliData['tag'];
+                $this->dateAdded = $this->mysqliData['dateAdded'];
                 return true;
             }
        
 
         }
+
+
 
         public function getTitle(){
             return $this->title;
@@ -81,6 +89,27 @@
         public function getGenre(){
             return $this->genre;
         }
+
+        /**
+         * @return mixed|null
+         */
+        public function getTag()
+        {
+            return $this->tag;
+        }
+
+        /**
+         * @return mixed|null
+         */
+        public function getDateAdded()
+        {
+
+            $phpdate = strtotime($this->dateAdded);
+            $mysqldate = date('d/M/Y', $phpdate);
+
+            return $mysqldate;
+        }
+
 
         public function getPlays(){
             return $this->plays;

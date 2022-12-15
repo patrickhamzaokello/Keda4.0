@@ -15,7 +15,7 @@ $djmixesarray = array();
 $playlistQuery = mysqli_query($con, "SELECT * FROM playlists where status = 1 AND featuredplaylist ='yes' ORDER BY RAND ()");
 //query all curated playlist whose expirystate is false (0) - not expired yet
 $curatedplaylistQuery = mysqli_query($con, "SELECT * FROM curatedplaylist where expirystate = 0");
-$musicartistQuery = mysqli_query($con, "SELECT * FROM artists WHERE tag='music' ORDER BY overalplays DESC LIMIT 20");
+$musicartistQuery = mysqli_query($con, "SELECT * FROM artists WHERE tag='music' AND featured = 1 ORDER BY RAND () LIMIT 10");
 $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE tag = \"music\" ORDER BY totalsongplays DESC LIMIT  20");
 $podcastQuery = mysqli_query($con, "SELECT * FROM albums WHERE tag = \"podcast\" ORDER BY datecreated DESC LIMIT 20");
 $poemQuery = mysqli_query($con, "SELECT * FROM albums WHERE tag = \"poem\" ORDER BY datecreated DESC LIMIT 20");
